@@ -1,0 +1,1230 @@
+((("iter" .
+   [0 0 0 1])
+  ("visited_a" .
+   [0 0 1 0 0 0 0 0 1])
+  ("calc_route" .
+   [0 0 0 0 0 0 0 0 0 1])
+  ("(link head, int *visited)" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2])
+  ("calc_hash" .
+   [0 0 0 1 0 0 0 0 0])
+  ("HASHTABLE_SIZE" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("new_head" .
+   [0 0 0 0 0 0 0 1])
+  ("tmp" .
+   [1 0 0])
+  ("new_tail" .
+   [0 0 0 3 0 0 0 0])
+  ("i" .
+   [1])
+  ("(link *head, remove_func)" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2])
+  ("remove_if" .
+   [0 0 0 0 0 0 0 0 2])
+  ("head" .
+   [0 0 0 2])
+  ("remove_func" .
+   [0 0 1 0 0 0 0 0 0 0 0])
+  ("changed" .
+   [1 0 0 0 0 0 3])
+  ("reop_expanding" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("reopprod" .
+   [0 0 0 0 1 0 0 0])
+  ("EPSILON" .
+   [0 0 0 0 0 0 1])
+  ("level" .
+   [0 0 0 0 2])
+  ("currsym" .
+   [0 0 0 1 1 0 0])
+  ("currlevel" .
+   [0 0 0 2 1 0 0 0 5])
+  ("op" .
+   [1 0])
+  ("filename" .
+   [0 0 0 0 0 0 0 1])
+  ("(Clause *cl)" .
+   [0 0 0 0 0 0 0 0 0 0 0 1])
+  ("addedToClause" .
+   [0 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("termprod" .
+   [0 0 0 0 1 0 0 1])
+  ("NONTERM_COPYTING" .
+   [0 0 0 0 0 0 0 2 0 0 0 0 0 0 0 0])
+  ("expr__attribute" .
+   [0 0 0 0 4 0 0 0 0 0 0 0 0 0 4])
+  ("COPY_TERMINAL" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 2])
+  ("starting_op" .
+   [0 0 0 0 0 0 0 0 0 0 3])
+  ("term_attribute" .
+   [0 0 0 0 2 0 0 0 0 0 0 0 0 0])
+  ("COPY_NONTERM" .
+   [0 0 0 0 4 0 0 0 0 0 0 5])
+  ("TERMINAL_COPYING" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("tempnum" .
+   [0 0 0 0 1 0 0])
+  ("expr_result" .
+   [2 0 0 0 0 0 0 0 0 0 0])
+  ("id_lexeme" .
+   [2 0 0 0 0 0 0 0 0])
+  ("srcsym" .
+   [1 0 1 2 0 0])
+  ("expr_attribute" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 5])
+  ("assignstmt_attribute" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3])
+  ("expr__result" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("expr__first_op" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("term_lexeme" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("srcattr" .
+   [0 0 1 5 0 0 7])
+  ("(const char *format, int codelen, ...)" .
+   [5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("addcode" .
+   [0 0 0 2 0 0 4])
+  ("(char *, const char *, __va_list_tag *)" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("vsprintf" .
+   [0 0 0 0 0 0 0 1])
+  ("codelen" .
+   [2 0 0 1 2 0 0])
+  ("va_list" .
+   [0 0 0 0 0 0 2])
+  ("TERMINAL" .
+   [1 0 0 0 0 0 1 1])
+  ("init_parser" .
+   [0 0 0 0 0 0 0 0 1 0 0])
+  ("NONTERMNUM" .
+   [0 0 0 0 0 0 0 0 0 4])
+  ("startsym" .
+   [0 0 0 0 0 2 0 1])
+  ("PROG" .
+   [0 0 0 4])
+  ("(struct grammar_symbol startsym)" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("parse" .
+   [0 0 0 1 0])
+  ("iter_nonterm" .
+   [0 0 0 0 0 0 0 0 0 0 0 1])
+  ("code" .
+   [6 0 1 3])
+  ("nonterms" .
+   [0 0 0 0 0 0 2 2])
+  ("MAXNONTERMNUM" .
+   [0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("nonterminals" .
+   [0 0 0 0 0 0 1 0 0 0 0 0])
+  ("nonterminal" .
+   [0 0 0 0 0 0 0 0 0 0 1])
+  ("MAXTERMINALNUM" .
+   [0 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("terminal" .
+   [0 0 0 0 0 1 0 1])
+  ("MAXPRODUCTIONLEN" .
+   [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("grammar_symbol" .
+   [1 0 0 0 0 1 0 0 0 0 0 0 0 16])
+  ("production_element" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("production" .
+   [0 0 0 1 0 0 0 0 0 4])
+  ("sematic_action_func" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("parser" .
+   [1 0 1 0 0 0])
+  ("general_header" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("PARSER_H_" .
+   [0 0 0 0 0 0 1 0 1])
+  ("iseq" .
+   [0 0 0 1])
+  ("GE_AC" .
+   [0 0 0 0 2])
+  ("GT_AC" .
+   [0 1 0 0 1])
+  ("isrsbracket" .
+   [0 0 0 0 0 0 0 0 0 0 1])
+  ("RSBRACKET_AC" .
+   [0 0 0 0 0 0 0 0 0 0 0 3])
+  ("EXCLA" .
+   [0 0 0 0 1])
+  ("issemicolon" .
+   [0 0 0 0 0 0 0 0 0 0 1])
+  ("SEMICOLON_AC" .
+   [0 0 0 0 0 0 0 0 0 0 0 3])
+  ("RBRACE_AC" .
+   [0 0 0 0 0 0 0 0 3])
+  ("islbrace" .
+   [0 0 0 0 0 0 0 1])
+  ("LBRACE_AC" .
+   [0 0 0 0 0 0 0 0 3])
+  ("isrrbracket" .
+   [0 0 0 0 0 0 0 0 0 0 1])
+  ("RRBRACKET_AC" .
+   [0 0 0 0 0 0 0 0 0 0 0 3])
+  ("(int c)" .
+   [0 0 0 0 0 0 7])
+  ("islrbracket" .
+   [0 0 0 0 0 0 0 0 0 0 1])
+  ("RSBRACKET" .
+   [0 0 0 0 0 0 0 0 1])
+  ("LSBRACKET" .
+   [0 0 0 0 0 0 0 0 1])
+  ("SEMICOLON" .
+   [0 0 0 0 0 0 0 0 1])
+  ("COMMA" .
+   [0 1 0 0 0])
+  ("RBRACE" .
+   [0 0 0 0 0 1])
+  ("LBRACE" .
+   [0 0 0 0 0 1])
+  ("RRBRACKET" .
+   [0 0 0 0 0 0 0 0 1])
+  ("LRBRACKET" .
+   [0 1 0 0 0 0 0 0 0])
+  ("while" .
+   [0 0 0 0 1])
+  ("END_AC" .
+   [0 0 0 0 0 2])
+  ("ENDCHAR" .
+   [0 0 0 0 0 0 1])
+  ("new_state" .
+   [0 0 0 0 0 0 0 0 1])
+  ("(char *path)" .
+   [0 0 0 0 0 0 0 0 0 0 0 1])
+  ("openfile" .
+   [0 0 0 1 0 0 0 0])
+  ("(struct state_vars *vars)" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2])
+  ("transit" .
+   [0 0 0 0 0 0 2])
+  ("typecode" .
+   [0 0 0 0 0 0 0 1])
+  ("(char *, const char *, unsigned long)" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("strncpy" .
+   [0 0 0 0 1 0 0])
+  ("ERROR" .
+   [0 0 0 0 1])
+  ("attribute" .
+   [11 0 0 1 0 0 0 0 7])
+  ("type" .
+   [10 0 0 4])
+  ("thistoken" .
+   [0 0 0 0 0 0 0 0 15])
+  ("token" .
+   [0 0 1 0 2])
+  ("(struct state_vars vars, char c)" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4])
+  ("normal_action" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 6])
+  ("ID_AC" .
+   [0 0 0 0 1])
+  ("vars" .
+   [3 0 1 10])
+  ("length" .
+   [1 1 0 0 0 0])
+  ("lexeme" .
+   [3 1 6 1 0 5])
+  ("DIVIDE_AC" .
+   [0 0 0 1 1 0 0 0 0])
+  ("MULTIPLY_AC" .
+   [0 0 0 1 0 0 0 0 0 0 0])
+  ("MINUS_AC" .
+   [0 0 0 1 0 0 0 1])
+  ("bufptr" .
+   [0 0 0 6 0 1])
+  ("(void *restrict __ptr, int __size, int __n, FILE *restrict __stream)" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("fread" .
+   [0 0 0 1 0])
+  ("iter_field" .
+   [0 0 1 0 0 0 0 0 0 0])
+  ("p_iter_field" .
+   [0 0 1 0 0 0 0 0 0 0 0 0])
+  ("(int __domain, int __type, int __protocol)" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("servfd" .
+   [0 0 0 0 2 0])
+  ("(struct addrinfo *__ai)" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("freeaddrinfo" .
+   [0 0 1 0 0 0 0 0 0 0 0 0])
+  ("ai_addrlen" .
+   [0 0 1 0 0 0 0 0 0 0])
+  ("result" .
+   [4 0 0 0 0 2])
+  ("servaddrlen" .
+   [0 0 0 0 1 0 0 0 0 0 0])
+  ("servaddr" .
+   [0 0 0 0 1 0 0 0])
+  ("ai_addr" .
+   [0 0 0 1 0 0 0])
+  ("ai_socktype" .
+   [0 0 1 0 0 0 0 0 0 0 0])
+  ("ai_family" .
+   [1 0 0 0 0 0 0 0 0])
+  ("hints" .
+   [0 0 0 0 2])
+  ("p_host" .
+   [0 0 0 0 0 1])
+  ("(char *url, char **host, int *hostlen)" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("get_host_from_url" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("host" .
+   [0 0 1 0])
+  ("hostlen" .
+   [0 0 2 0 0 0 0])
+  ("(char *start_line, int sllen, char **first_field, int *flen, char **second_field, int *slen, char **third_field, int *tlen)" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("get_start_fields" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("sllen" .
+   [0 0 0 0 1])
+  ("tlen" .
+   [0 0 0 1])
+  ("third_field" .
+   [0 0 0 0 0 0 0 0 0 0 3])
+  ("flen" .
+   [2 0 0 0])
+  ("second_field" .
+   [0 0 0 0 0 2 0 0 0 0 0 3])
+  ("first_field" .
+   [0 0 0 0 0 0 0 0 0 0 3])
+  ("hostname" .
+   [0 0 2 0 0 0 0 0])
+  ("(struct header_field *header_fields, char *name)" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("get_header_field" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("host_header_field" .
+   [0 0 0 1 2 0 0 0 0 0 0 0 0 0 0 0 2])
+  ("(const char *restrict __name, const char *restrict __service, const struct addrinfo *restrict __req, struct addrinfo **restrict __pai)" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2])
+  ("getaddrinfo" .
+   [0 0 0 0 0 0 0 0 0 0 2])
+  ("(int filedes, const void *buf, int nbytes)" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2])
+  ("Write" .
+   [1 0 0 0 1])
+  ("new_request_len" .
+   [0 0 2 1 0 1 0 0 0 0 0 0 0 0 0])
+  ("new_rlen" .
+   [0 0 0 1 0 1 0 0])
+  ("vlen" .
+   [1 2 0 2])
+  ("bufpos" .
+   [0 0 0 0 0 2])
+  ("nlen" .
+   [1 0 0 0])
+  ("(char *buf, const char *content, int clen)" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2])
+  ("current_header_field" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 10])
+  ("rlen" .
+   [0 1 0 0])
+  ("(char *buf, const char *content, int contentlen)" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("write_to_buf" .
+   [0 0 1 1 1 0 0 0 0 0 0 0])
+  ("contentlen" .
+   [1 0 0 0 1 0 0 0 0 0])
+  ("content" .
+   [0 0 0 1 0 0 0])
+  ("buflen" .
+   [0 0 0 0 0 2])
+  ("current_pos" .
+   [0 0 0 0 0 0 0 0 0 0 3])
+  ("poor_field" .
+   [0 0 0 0 0 0 0 0 0 3])
+  ("p_header_fields" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 4])
+  ("p_current_field" .
+   [0 4 1 0 0 0 0 0 0 0 0 0 0 0 7])
+  ("(const char *, const char *, unsigned long)" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("strncmp" .
+   [0 0 0 0 1 0 0])
+  ("current_field" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 12])
+  ("header_fields_tail" .
+   [0 0 0 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("next" .
+   [6 1 0 17])
+  ("v_len" .
+   [0 0 0 0 1])
+  ("name" .
+   [0 0 0 1])
+  ("namelen" .
+   [1 0 0 0 0 0 0])
+  ("value" .
+   [9 2 0 0 10])
+  ("new_field" .
+   [0 0 0 0 0 0 0 0 14])
+  ("current_line" .
+   [0 0 0 0 0 0 0 0 0 0 0 3])
+  ("(const char *__haystack, const char *__needle)" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7])
+  ("strstr" .
+   [2 0 0 2 2 2])
+  ("(void *, int, unsigned long)" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5])
+  ("memset" .
+   [2 0 0 2 0 1])
+  ("header_field" .
+   [0 0 0 0 0 0 0 0 0 0 0 13])
+  ("MEDIUMLINE" .
+   [0 0 0 0 0 0 0 0 0 3])
+  ("(unsigned long, unsigned long)" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8])
+  ("calloc" .
+   [4 0 0 0 0 4])
+  ("bbytes" .
+   [1 0 0 0 0 0])
+  ("(void *, const void *, unsigned long)" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5])
+  ("memcpy" .
+   [0 0 0 5 0 0])
+  ("sbytes" .
+   [0 0 0 0 0 1])
+  ("MINILINE" .
+   [0 0 0 0 0 0 0 2])
+  ("h_start" .
+   [0 1 0 0 0 0 0])
+  ("b_start" .
+   [0 0 1 0 0 0 1])
+  ("s_start" .
+   [0 0 2 0 0 0 1])
+  ("message" .
+   [0 0 0 0 1 0 1])
+  ("MAXLINE" .
+   [0 0 0 0 0 0 3])
+  ("sin_addr" .
+   [0 0 0 1 0 0 0 0])
+  ("sockaddr_in" .
+   [0 0 1 0 1 0 0 0 0 0 0])
+  ("struct" .
+   [10 0 1 3 0 25])
+  ("firsttime" .
+   [0 0 0 0 0 0 0 0 1])
+  ("endtime" .
+   [1 0 0 0 0 0 2])
+  ("resttime" .
+   [0 0 0 0 0 0 0 5])
+  ("recv" .
+   [1 0 0 0])
+  ("starttime" .
+   [0 0 0 0 0 0 0 0 2])
+  ("readable_socks" .
+   [0 0 0 0 2 0 0 0 0 0 0 0 0 0])
+  ("sendto" .
+   [0 0 1 0 0 0])
+  ("client_sock" .
+   [1 0 0 0 1 4 0 0 0 0 1])
+  ("socket" .
+   [0 0 1 0 1 0])
+  ("server_sock" .
+   [0 0 0 7 1 0 2 0 0 0 0])
+  ("server" .
+   [1 0 0 0 0 0])
+  ("__name__" .
+   [0 0 0 0 0 0 0 1])
+  ("sock" .
+   [1 0 0 0])
+  ("urlbuf" .
+   [0 0 0 0 0 2])
+  ("notfound_str" .
+   [0 0 0 0 0 0 0 0 0 0 0 1])
+  ("readok" .
+   [2 0 0 0 0 0])
+  ("(int __status)" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 4])
+  ("exit" .
+   [3 0 1 0])
+  ("(const char *restrict __s, FILE *restrict __stream)" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5])
+  ("fputs" .
+   [5 0 0 0 0])
+  ("(int __fd, void *__buf, int __nbytes)" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("read" .
+   [1 0 0 0])
+  ("(int __fd, const struct iovec *__iovec, int __count)" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("readv" .
+   [0 0 0 0 1])
+  ("(int __fd, const void *__buf, int __n)" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3])
+  ("write" .
+   [2 0 0 0 1])
+  ("(const char *)" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 6])
+  ("(FILE *__stream)" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4])
+  ("fclose" .
+   [0 0 0 0 1 3])
+  ("sizeof" .
+   [0 0 0 0 0 2])
+  ("respbuf" .
+   [0 0 0 6 0 0 1])
+  ("connfd" .
+   [0 0 0 1 1 1])
+  ("notfound_file_contents" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("notfound_content_type" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("notfound_phrase" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("notfound_status_code" .
+   [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("versionbuf" .
+   [0 0 0 0 0 0 0 0 0 3])
+  ("(char *restrict __s, const char *restrict __format)" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("(char *restrict __s, const char *restrict __format, ...)" .
+   [3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("sprintf" .
+   [0 0 0 0 0 0 4])
+  ("generate_response" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("response" .
+   [0 0 0 1 0 0 1 0])
+  ("Response" .
+   [0 0 0 0 1 1 1 0])
+  ("content_length_line" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("content_length" .
+   [0 0 0 1 0 0 1 0 0 0 0 0 0 0])
+  ("encode" .
+   [1 0 0 0 0 0])
+  ("len" .
+   [1 0 0])
+  ("file_contents" .
+   [0 0 0 0 1 2 0 0 0 0 0 0 0])
+  ("phrase" .
+   [0 0 2 0 0 2])
+  ("status_code" .
+   [0 0 0 0 2 0 0 0 0 0 2])
+  ("open" .
+   [1 0 0 0])
+  ("path" .
+   [2 0 0 0])
+  ("version" .
+   [2 0 0 1 0 1 0])
+  ("server_ip" .
+   [1 0 0 1 0 0 0 1 0])
+  ("url" .
+   [3 0 0])
+  ("str" .
+   [5 0 1])
+  ("address" .
+   [0 0 0 1 0 1 0])
+  ("args" .
+   [0 0 2 1])
+  ("aabce" .
+   [0 0 1 0 0])
+  ("debug" .
+   [0 0 1 0 0])
+  ("print" .
+   [9 0 1 1 5])
+  ("content_type_line" .
+   [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("continue" .
+   [0 0 0 3 0 0 0 0])
+  ("connect_sock" .
+   [0 0 0 5 0 1 0 0 0 0 0 0])
+  ("headers" .
+   [0 0 0 0 0 0 1])
+  ("header" .
+   [0 0 0 0 0 1])
+  ("int" .
+   [2 0 1])
+  ("except" .
+   [0 0 0 0 0 1])
+  ("uncategorized" .
+   [0 0 1 0 0 0 0 0 0 0 0 0 1])
+  ("favourites" .
+   [0 0 0 0 0 0 0 0 0 2])
+  ("recently_added" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 2])
+  ("mostly_visited" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 2])
+  ("ajax_views" .
+   [0 0 0 0 4 0 0 0 0 2])
+  ("ajax" .
+   [0 0 0 1])
+  ("rendered_bookmark_list" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("render" .
+   [0 0 0 0 0 2])
+  ("cont" .
+   [0 0 0 1])
+  ("bookmark_list" .
+   [0 0 0 0 0 0 0 0 2 0 0 0 0])
+  ("RequestContext" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 1])
+  ("request" .
+   [0 0 6 0 0 0 3])
+  ("get_ajax_data" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("asia_codeless" .
+   [0 0 1 0 0 0 0 0 0 0 0 0 3])
+  ("define" .
+   [1 0 0 0 0 10])
+  ("defmacro" .
+   [0 0 0 0 0 1 0 0])
+  ("defma" .
+   [0 0 0 0 1])
+  ("HttpResponse" .
+   [0 0 0 0 0 0 0 0 0 0 0 1])
+  ("return" .
+   [1 0 0 0 0 3])
+  ("(const char *__s, const char *__accept)" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("strpbrk" .
+   [0 0 0 1 0 0 0])
+  ("(const char *__s)" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3])
+  ("strlen" .
+   [3 0 0 1 1 5])
+  ("(const char *restrict __format, ...)" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("printf" .
+   [1 0 0 0 0 1])
+  ("reload" .
+   [0 0 0 0 0 1])
+  ("(_InputIterator __first, _InputIterator __last)" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("distance" .
+   [0 1 0 0 0 0 0 0])
+  ("(char *__string)" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("putenv" .
+   [0 0 0 0 1 0])
+  ("(const char *__command, const char *__modes)" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("popen" .
+   [0 0 0 0 1])
+  ("(int __w, FILE *__stream)" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("putw" .
+   [0 0 0 1])
+  ("pthread_rwlock_t" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("function" .
+   [0 0 0 0 1 0 0 0])
+  ("float" .
+   [0 0 1 0 0])
+  ("double" .
+   [0 0 0 3 0 1])
+  ("ada" .
+   [2 0 0])
+  ("()" .
+   [0 25])
+  ("adfadfa" .
+   [0 1 0 0 0 0 0])
+  ("integerp" .
+   [0 0 0 1 0 0 0 0])
+  ("intern" .
+   [0 0 0 0 1 0])
+  ("interactive" .
+   [0 0 0 1 0 0 0 0 0 0 0])
+  ("urls" .
+   [0 0 0 1])
+  ("import" .
+   [0 0 0 0 0 4])
+  ("intersection" .
+   [0 0 0 0 0 1 0 0 0 0 0 0])
+  ("defun" .
+   [2 0 1 5 1])
+  ("setq" .
+   [2 0 0 0])
+  ("color-theme-classic" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("add-to-list" .
+   [0 0 0 0 0 0 1 0 0 0 3])
+  ("class" .
+   [4 0 0 0 0])
+  ("as" .
+   [0 1])
+  ("pass" .
+   [1 0 1 0])
+  ("aaaa" .
+   [0 0 1 0])
+  ("aaadlf" .
+   [0 0 0 0 0 1])
+  ("abs" .
+   [1 0 3])
+  ("aaadla" .
+   [0 0 0 0 0 1])
+  ("inline" .
+   [1 1 0 0 0 0])
+  ("char" .
+   [2 0 0 0])
+  ("def" .
+   [6 0 2])
+  ("HttpRequest" .
+   [0 0 0 0 0 0 0 0 0 0 1])
+  ("DataItem" .
+   [0 0 0 0 0 0 0 1])
+  ("(const string &name)" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("push_back" .
+   [0 0 0 0 0 0 0 0 1])
+  ("(const value_type &__x)" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("cout" .
+   [0 0 1 0])
+  ("timer" .
+   [0 0 0 0 1])
+  ("clear" .
+   [0 0 1 0 0])
+  ("system" .
+   [0 1 0 0 0 1])
+  ("(const char *__command)" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2])
+  ("max_length" .
+   [0 0 2 1 0 0 0 0 0 0])
+  ("models" .
+   [0 0 0 0 0 2])
+  ("template" .
+   [0 0 0 0 0 0 0 2])
+  ("loader" .
+   [0 0 0 0 0 1])
+  ("context" .
+   [0 0 0 0 1 0 2])
+  ("Category" .
+   [0 0 0 0 0 0 0 2])
+  ("title" .
+   [0 1 0 0 1])
+  ("Bookmark" .
+   [0 0 0 0 0 0 0 3])
+  ("category" .
+   [0 0 0 0 0 0 0 2])
+  ("category_list" .
+   [0 0 0 0 0 0 0 0 3 0 0 0 1])
+  ("bookmark" .
+   [0 0 0 0 0 0 0 4])
+  ("utils" .
+   [0 0 0 0 1])
+  ("enum" .
+   [0 0 0 1])
+  ("encode_id" .
+   [0 0 0 0 0 1 0 0 0])
+  ("objects" .
+   [0 0 0 0 0 0 1])
+  ("get_category_list" .
+   [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("define-class" .
+   [0 0 0 0 0 0 1 0 0 0 0 0])
+  ("decode_id" .
+   [0 0 1 0 0 0 0 0 0])
+  ("the_list" .
+   [0 0 0 0 0 0 0 1])
+  ("check" .
+   [0 0 1 0 1])
+  ("make_list" .
+   [0 0 0 3 1 0 0 0 1])
+  ("decimal" .
+   [0 1 1 0 0 0 3])
+  ("content_type" .
+   [0 0 0 1 0 1 1 0 0 0 0 0])
+  ("Connection" .
+   [0 0 0 2 0 0 0 0 0 0])
+  ("xrange" .
+   [0 1 0 0 0 0])
+  ("for" .
+   [1 0 2])
+  ("and" .
+   [0 1 0])
+  ("scanf" .
+   [0 0 1 0 0])
+  ("static_cast" .
+   [0 0 0 0 0 0 0 0 0 0 1])
+  ("get_header_fields" .
+   [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("resolve_request" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("rest_request" .
+   [0 0 0 0 0 0 0 0 0 0 0 1])
+  ("header_lines" .
+   [0 0 0 0 1 1 1 0 0 0 0 13])
+  ("header_fields" .
+   [0 0 1 2 6 3 9 3 0 0 0 0 3])
+  ("rest_lines" .
+   [0 0 1 0 5 0 0 0 0 4])
+  ("uncompleted_body" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("new_request" .
+   [0 0 1 0 0 0 0 0 0 0 5])
+  ("request_line" .
+   [0 0 2 1 0 2 0 1 0 0 0 1])
+  ("server_address" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("separate_http_message" .
+   [0 0 0 0 0 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("client" .
+   [0 0 0 0 0 1])
+  ("start_line" .
+   [0 0 0 0 0 2 0 0 0 5])
+  ("new_header_lines" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("do_proxy" .
+   [0 0 0 0 0 0 0 1])
+  ("body" .
+   [0 0 0 4])
+  ("proxy_sock" .
+   [0 0 0 0 1 1 0 0 0 0])
+  ("server_port" .
+   [0 0 0 1 0 1 0 0 0 0 0])
+  ("server_name" .
+   [0 0 0 1 0 0 1 0 0 0 0])
+  ("get_hostname_from_url" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("parent_pid" .
+   [0 0 0 0 0 0 0 0 0 1])
+  ("remove_header_field" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("(struct header_field **p_header_fields, char *name)" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("sockaddr" .
+   [0 0 0 0 0 0 0 1])
+  ("socklen_t" .
+   [0 0 0 0 0 0 1 0 0])
+  ("fprintf" .
+   [0 0 0 0 0 0 3])
+  ("(FILE *restrict __stream, const char *restrict __format" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("(FILE *restrict __stream, const char *restrict __format, ...)" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("slen" .
+   [1 0 1 1])
+  ("blen" .
+   [0 0 0 2])
+  ("hlen" .
+   [0 0 0 1])
+  ("Shutdown" .
+   [0 0 0 0 0 0 0 1])
+  ("shutdown" .
+   [0 0 0 1 0 0 0 0])
+  ("(int __fd, int __how)" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("sockfd" .
+   [0 0 0 0 1 0])
+  ("err_sys" .
+   [0 0 1 0 0 0 0])
+  ("response_len" .
+   [0 0 0 0 0 0 1 1 0 0 0 0])
+  ("stdout" .
+   [0 0 0 1 0 0])
+  ("unistd" .
+   [0 0 0 0 0 1])
+  ("FILE" .
+   [0 0 0 3])
+  ("srcfile" .
+   [0 0 0 0 0 0 8])
+  ("fopen" .
+   [1 0 0 0 1])
+  ("(const char *restrict __filename, const char *restrict __modes)" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2])
+  ("ifndef" .
+   [0 0 0 0 0 1])
+  ("currchar" .
+   [0 0 0 0 0 0 0 1])
+  ("buf1" .
+   [0 0 1 0])
+  ("filter_space" .
+   [0 0 0 0 0 0 1 0 0 0 0 1])
+  ("reload_buf" .
+   [0 0 0 0 0 1 0 0 0 1])
+  ("buf" .
+   [3 0 0])
+  ("isspace" .
+   [0 0 0 0 1 1 0])
+  ("(int)" .
+   [0 0 0 0 6])
+  ("char_check_func" .
+   [0 0 1 1 4 0 0 0 0 0 0 0 0 0 1])
+  ("MAXSTATENUM" .
+   [0 0 0 1 0 0 0 0 0 0 1])
+  ("transition" .
+   [0 1 0 1 1 0 0 0 0 10])
+  ("rules" .
+   [0 0 0 0 1])
+  ("rule" .
+   [0 0 0 2])
+  ("newrule" .
+   [0 0 0 0 0 0 4])
+  ("func" .
+   [2 0 0 1])
+  ("trans" .
+   [0 0 0 0 1])
+  ("last_rule" .
+   [1 0 0 0 0 0 0 0 1])
+  ("state" .
+   [1 0 0 0 2])
+  ("thisstate" .
+   [0 0 0 0 0 0 0 0 4])
+  ("last_transition" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 3])
+  ("newtrans" .
+   [0 0 0 3 0 0 0 2])
+  ("dststate" .
+   [2 0 0 0 0 0 0 3])
+  ("tmptrans" .
+   [0 0 0 1 0 1 0 1])
+  ("newtransition" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 8])
+  ("(int dststate)" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 2])
+  ("ID_FIRST_STATE" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 3])
+  ("tempnam" .
+   [0 0 0 0 0 0 1])
+  ("addtransition" .
+   [2 0 1 2 0 0 0 0 0 0 0 0 20])
+  ("(struct state *thisstate, struct transition *newtrans)" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3])
+  ("addrule" .
+   [0 0 1 1 0 0 0])
+  ("(struct transition *trans, char_check_func func)" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2])
+  ("NUMBER_FIRST_STATE" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3])
+  ("srcstate" .
+   [0 0 0 0 0 0 0 2])
+  ("isalpha" .
+   [0 0 0 2 1 0 0])
+  ("(int srcstate, char_check_func func, int dststate)" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2])
+  ("ID_AC_STAE" .
+   [0 0 1 0 0 0 0 0 0 0])
+  ("(int srcstate, int dststate, char_check_func func)" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 19])
+  ("START" .
+   [0 0 0 0 7])
+  ("PLUS_AC" .
+   [0 1 0 0 0 0 3])
+  ("get_char" .
+   [0 0 0 0 0 0 0 1])
+  ("typedef" .
+   [1 0 0 0 0 0 0])
+  ("itertrans" .
+   [0 0 0 0 0 0 0 0 6])
+  ("states" .
+   [4 0 1 2 0 11])
+  ("current_state" .
+   [0 0 0 3 1 0 0 0 0 0 0 0 3])
+  ("transitions" .
+   [1 0 0 0 0 0 0 0 0 0 1])
+  ("state_vars" .
+   [0 0 0 3 2 8 0 0 0 1])
+  ("current_vars" .
+   [0 0 1 2 1 0 0 0 0 0 0 1])
+  ("newstate" .
+   [0 0 0 0 0 0 0 2])
+  ("action_func" .
+   [0 0 0 0 0 0 0 0 0 0 1])
+  ("action" .
+   [0 0 5 0 0 3])
+  ("transitted" .
+   [0 0 1 0 1 0 0 0 0 1])
+  ("TRUE" .
+   [0 0 0 1])
+  ("accepted" .
+   [2 0 8 0 0 0 0 19])
+  ("p_last_transition" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("EQUAL_AC" .
+   [0 0 0 0 0 0 0 4])
+  ("LRBRACKET_AC" .
+   [0 0 0 0 0 0 0 0 0 0 0 2])
+  ("COMMA_AC" .
+   [0 0 0 0 0 0 0 1])
+  ("LT_AC" .
+   [0 0 0 0 2])
+  ("LE_AC" .
+   [0 0 0 0 1])
+  ("DOUBLEEQ_AC" .
+   [0 0 0 0 0 0 0 0 0 0 2])
+  ("NOTEQ_AC" .
+   [0 0 0 0 0 0 0 2])
+  ("LSBRACKET_AC" .
+   [0 0 0 0 0 0 0 0 0 0 0 2])
+  ("STATENUM" .
+   [0 1 0 0 0 0 0 0])
+  ("NUMBER_1_AC" .
+   [0 0 7 0 0 0 0 0 0 0 0])
+  ("isdigit" .
+   [0 0 0 0 1 0 0])
+  ("NUMBER_4" .
+   [0 0 2 3 0 0 0 0])
+  ("NUMBER_2" .
+   [0 0 1 0 0 0 0 0])
+  ("NUMBER_3_AC" .
+   [0 0 2 3 1 0 0 0 0 0 0])
+  ("NUMBER_5" .
+   [0 0 0 3 0 0 0 0])
+  ("NUMBER_6_AC" .
+   [0 0 1 3 0 1 0 0 0 0 0])
+  ("add_start_trans" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("add_intermediate_trans" .
+   [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("set_ac_states" .
+   [0 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("add_actions" .
+   [0 0 0 1 0 0 0 0 0 0 0])
+  ("MAXKEYWORDNUM" .
+   [0 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("set_keywords" .
+   [0 0 0 0 1 0 0 0 0 0 0 0])
+  ("keywords" .
+   [0 0 0 3 1 0 0 0])
+  ("keyword_num" .
+   [0 0 1 3 0 0 0 0 0 0 0])
+  ("addkeyword" .
+   [0 0 0 7 0 0 0 0 0 2])
+  ("(int type, const char *lexeme)" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9])
+  ("strcmp" .
+   [0 0 0 0 1 1])
+  ("(const char *__s1, const char *__s2)" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("base_decibits" .
+   [1 0 1 0 0 0 0 0 0 0 0 0 2])
+  ("exp_sym" .
+   [1 0 3 0 0 0 0])
+  ("static" .
+   [0 0 0 0 0 1])
+  ("(struct state_vars *vars, char c)" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5])
+  ("base" .
+   [3 0 1 0])
+  ("actual_value" .
+   [1 0 0 0 0 0 0 0 0 0 0 2])
+  ("pow" .
+   [2 0 1])
+  ("(double __x, double __y)" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2])
+  ("ctoi" .
+   [0 0 1 1])
+  ("(char c)" .
+   [0 0 0 0 0 0 0 2])
+  ("isminus" .
+   [0 0 0 1 0 0 0])
+  ("exp" .
+   [1 1 0])
+  ("number_1_action" .
+   [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("number_3_action" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("number_5_action" .
+   [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("number_6_action" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("p_label" .
+   [0 0 1 0 0 0 1])
+  ("labelnum" .
+   [0 0 0 2 0 0 0 0])
+  ("getnexttoken" .
+   [0 0 0 0 0 0 0 0 0 0 0 1])
+  ("PARSING_OK" .
+   [0 0 1 9 1 1 0 0 0 0])
+  ("condstmtprod" .
+   [0 0 0 2 2 0 0 0 0 0 0 0])
+  ("SATTR_CALCULATING" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4])
+  ("id" .
+   [2 0])
+  ("lopd" .
+   [2 0 0 4])
+  ("ropd" .
+   [1 2 0 2])
+  ("assignstmt_expr_copying" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("(const struct grammar_symbol *srcsym)" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5])
+  ("assignstmt_sattr_calculating" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("NONTERM_COPYING" .
+   [0 0 0 0 0 2 1 3 1 0 1 0 0 0 3])
+  ("INTERMEDIATE_ACTION" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6])
+  ("ELSECLAUSE" .
+   [0 0 0 0 0 0 0 0 0 1])
+  ("CONDSTMT" .
+   [0 0 0 0 4 0 0 1])
+  ("cond_attribute" .
+   [0 0 0 0 3 0 0 0 0 0 0 0 0 2])
+  ("sym" .
+   [3 0 0])
+  ("attr" .
+   [6 0 2 5])
+  ("reop" .
+   [1 0 0 0])
+  ("parsing_stack" .
+   [0 0 0 0 4 0 0 1 0 0 0 0 0])
+  ("dstsym" .
+   [0 0 0 0 0 11])
+  ("PARSING_ERROR" .
+   [0 0 0 3 1 0 0 0 0 0 0 0 0])
+  ("assignstmt_ultimate_action" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("(const struct grammar_symbol *sym)" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6])
+  ("ULTIMATE_ACTION" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 12])
+  ("condstmt_attribute" .
+   [0 0 0 0 3 0 0 0 0 0 0 0 0 0 0 0 0 5])
+  ("dstattr" .
+   [0 0 0 4 0 0 4])
+  ("condcode" .
+   [3 0 0 0 0 0 0 0])
+  ("then_label" .
+   [5 0 0 0 0 0 0 0 0 3])
+  ("newtemp" .
+   [0 0 0 1 0 0 1])
+  ("else_label" .
+   [4 0 0 0 0 0 0 0 0 3])
+  ("newlabel" .
+   [1 0 0 1 0 0 0 2])
+  ("(char **p_label)" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2])
+  ("next_label" .
+   [5 0 0 0 0 0 0 0 0 1])
+  ("condstmt_cond_copying" .
+   [0 0 0 0 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("condstmt_then_action" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("condstmt_else_action" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("stacktop" .
+   [0 0 0 0 0 1 0 2])
+  ("COND" .
+   [0 0 0 2])
+  ("var_" .
+   [0 0 0 1])
+  ("isSet" .
+   [2 0 1 0 0])
+  ("polarity_" .
+   [0 0 0 0 0 1 0 0 0])
+  ("LiteralListNode" .
+   [0 0 1 0 0 10 0 0 0 0 0 0 0 0 2])
+  ("iter_literal" .
+   [0 0 0 0 0 0 0 0 0 0 0 7])
+  ("sat" .
+   [1 0 0])
+  ("literal" .
+   [2 0 3 1 0 3 0])
+  ("formula_" .
+   [2 0 0 0 0 0 0 0])
+  ("literals_" .
+   [0 0 0 0 0 3 0 0 2])
+  ("p_tail_literals_" .
+   [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 2])
+  ("Literal" .
+   [0 0 0 0 0 7 3])
+  ("clause" .
+   [1 0 0 0 1 0])
+  ("formula" .
+   [0 0 0 2 0 0 0])
+  ("addVar" .
+   [1 0 0 0 0 0])
+  ("(unsigned int)" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("addLiteral" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("(Hidden)" .
+   [0 0 0 0 0 0 0 1])
+  ("literal_node" .
+   [0 0 0 0 0 4 1 0 0 0 0 0])
+  ("set" .
+   [4 0 0])
+  ("literal_id" .
+   [0 0 0 0 0 2 0 0 0 0])
+  ("var" .
+   [7 1 1])
+  ("literal_polarity" .
+   [0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0])
+  ("polarity" .
+   [2 0 0 0 0 1 0 0])
+  ("(Literal *literal)" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3])
+  ("notify" .
+   [2 0 0 0 1 0])
+  ("(unsigned int id, bool val)" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("(unsigned int id, bool set)" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2])
+  ("Variable" .
+   [0 0 0 0 0 0 0 4])
+  ("varible" .
+   [0 0 0 0 1 0 0])
+  ("addNode" .
+   [0 0 0 1 0 0 3])
+  ("(Clause::LiteralListNode *node)" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("(Clause::LiteralListNode *literal_node)" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3])
+  ("(Literal *literal, Variable *var, bool set)" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2])
+  ("PARSER_INIT_H_" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("init_nonterms" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("set_nonterms" .
+   [0 0 0 0 0 0 0 0 0 0 0 1])
+  ("condprod" .
+   [0 0 0 0 0 0 0 1])
+  ("expr__print_action" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("factor__attribute" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1])
+  ("final_result" .
+   [0 0 0 0 0 0 0 0 0 0 0 5])
+  ("factor_attribute" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("im_result" .
+   [0 0 0 0 0 0 0 0 2])
+  ("factor_factor__copying" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("factor__expr_expanding" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("load-path" .
+   [0 0 0 0 1 0 0 0 1])
+  ("retcode" .
+   [0 0 0 0 0 1 0])
+  ("END" .
+   [0 0 1])
+  ("start_label" .
+   [1 0 0 0 0 0 0 0 0 0 1])
+  ("EXPR" .
+   [0 0 1 0])
+  ("nullable" .
+   [0 0 0 0 0 0 0 1])
+  ("customisation" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("custom-set-variables" .
+   [0 0 0 0 0 0 2 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("oldhead" .
+   [0 0 0 0 0 0 2])
+  ("newhead" .
+   [0 0 0 0 0 0 1])
+  ("olditer" .
+   [0 0 0 0 0 0 6])
+  ("newiter" .
+   [0 0 0 0 0 0 1])
+  ("add-hook" .
+   [1 0 0 0 0 0 0 1])
+  ("org-mode-hook" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("lambda" .
+   [0 0 0 0 0 1])))

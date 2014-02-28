@@ -1,0 +1,380 @@
+;; Object config/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "config/"
+  :tables
+  (list
+    (semanticdb-table "ecb.el"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("add-to-list" code nil nil [17 59])
+            ("ecb" include nil nil [61 75]))          
+      :file "ecb.el"
+      :pointmax 78
+      :fsize 77
+      :lastmodtime '(21251 26425 720880 986000)
+      :unmatched-syntax nil)
+    (semanticdb-table "cedet.el"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("setq" code nil nil [342 419])
+            ("load-file" code nil nil [421 479])
+            ("add-to-list" code nil nil [480 539])
+            ("add-to-list" code nil nil [586 661])
+            ("add-to-list" code nil nil [662 732])
+            ("add-to-list" code nil nil [733 810])
+            ("add-to-list" code nil nil [811 884])
+            ("add-to-list" code nil nil [885 953])
+            ("add-to-list" code nil nil [954 1031])
+            ("add-to-list" code nil nil [1032 1102])
+            ("semantic-mode" code nil nil [1125 1142])
+            ("eassist" include nil nil [1168 1186])
+            ("alexott/cedet-hook" function nil nil [1214 2010])
+            ("add-hook" code nil nil [2012 2062])
+            ("add-hook" code nil nil [2063 2109])
+            ("add-hook" code nil nil [2110 2158])
+            ("add-hook" code nil nil [2159 2211])
+            ("add-hook" code nil nil [2212 2260])
+            ("alexott/c-mode-cedet-hook" function nil nil [2262 2501])
+            ("add-hook" code nil nil [2503 2560])
+            ("semanticdb-enable-gnu-global-databases" code nil nil [2562 2612])
+            ("semanticdb-enable-gnu-global-databases" code nil nil [2613 2665])
+            ("when" code nil nil [2667 2753])
+            ("global-srecode-minor-mode" code nil nil [2766 2795])
+            ("global-ede-mode" code nil nil [2804 2823])
+            ("ede-enable-generic-projects" code nil nil [2824 2853])
+            ("cedet-java" include nil nil [2874 2895]))          
+      :file "cedet.el"
+      :pointmax 2936
+      :fsize 2935
+      :lastmodtime '(21251 35445 267309 176000)
+      :unmatched-syntax nil)
+    (semanticdb-table "framemove.el"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("windmove-default-keybindings" code nil nil [842 872])
+            ("setq" code nil nil [873 910])
+            ("framemove-hook-into-windmove" variable nil nil [912 1014])
+            ("fm-frame-bbox" function (:arguments ("frame")) nil [1016 1337])
+            ("fm-opposite" function (:arguments ("dir")) nil [1339 1440])
+            ("fm-frame-coord" function (:arguments ("frame-or-box" "dir")) nil [1442 1650])
+            ("fm-frame-is-completly-to-dir-of" function (:arguments ("refframe" "dir" "otherframe")) nil [1652 2044])
+            ("fm-frame-is-to-dir-of" function (:arguments ("refframe" "dir" "otherframe")) nil [2046 2500])
+            ("fm-absolute-coords-of-position" function (:arguments ("position")) nil [2502 2779])
+            ("fm-frame-relative-coordinates" function (:arguments ("position")) nil [2781 3086])
+            ("fm-project" function (:arguments ("coord" "frame" "dir")) nil [3088 3329])
+            ("fm-next-frame" function
+               (:user-visible-flag t
+                :arguments ("dir"))
+                nil [3332 4946])
+            ("fm-dist-from-coords" function (:arguments ("coord" "frame")) nil [4948 5690])
+            ("fm-v-in-range" function (:arguments ("v" "range")) nil [5706 5788])
+            ("fm-bbox-range" function (:arguments ("dir" "box")) nil [5790 6003])
+            ("fm-range-overlap" function (:arguments ("f1" "f2" "dir")) nil [6005 6577])
+            ("fm-coord-in-range" function (:arguments ("coord" "dir" "frame")) nil [6579 7046])
+            ("fm-sort-frames-by-edge" function (:arguments ("framelist" "dir")) nil [7048 7280])
+            ("fm-down-frame" function nil nil [7297 7361])
+            ("fm-up-frame" function nil nil [7377 7437])
+            ("fm-left-frame" function nil nil [7453 7517])
+            ("fm-right-frame" function nil nil [7533 7599])
+            ("framemove-default-keybindings" function
+               (:user-visible-flag t
+                :arguments ("modifier"))
+                nil [7616 8122])
+            ("windmove-do-window-select" function (:arguments ("around" "framemove-do-window-select-wrapper" "activate")) nil [8124 8475])
+            ("framemove" package nil nil [8477 8497]))          
+      :file "framemove.el"
+      :pointmax 8525
+      :fsize 8524
+      :lastmodtime '(21171 24250 103486 790000)
+      :unmatched-syntax nil)
+    (semanticdb-table "magit.el"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("add-to-list" code nil nil [19 62])
+            ("eval-after-load" code nil nil [64 180])
+            ("magit" include nil nil [182 198]))          
+      :file "magit.el"
+      :pointmax 199
+      :fsize 198
+      :lastmodtime '(21171 28207 306715 496000)
+      :unmatched-syntax nil)
+    (semanticdb-table "xscheme.el"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("scheme" include nil nil [1126 1143])
+            ("xscheme" customgroup (:user-visible-flag t) nil [1145 1253])
+            ("if" code nil nil [1255 1479])
+            ("scheme-band-name" variable (:user-visible-flag t) nil [1481 1614])
+            ("scheme-program-arguments" variable (:user-visible-flag t) nil [1616 1784])
+            ("xscheme-allow-pipelined-evaluation" variable (:default-value t) nil [1786 2072])
+            ("xscheme-startup-message" variable (:default-value "This is the Scheme process buffer.
+Type \\[advertised-xscheme-send-previous-expression] to evaluate the expression before point.
+Type \\[xscheme-send-control-g-interrupt] to abort evaluation.
+Type \\[describe-mode] for more information.
+
+") nil [2074 2511])
+            ("xscheme-signal-death-message" variable nil nil [2513 2671])
+            ("xscheme-start-hook" variable nil nil [2673 2878])
+            ("xscheme-evaluation-commands" function (:arguments ("keymap")) nil [2880 3277])
+            ("xscheme-interrupt-commands" function (:arguments ("keymap")) nil [3279 3655])
+            ("xscheme-evaluation-commands" code nil nil [3657 3702])
+            ("xscheme-interrupt-commands" code nil nil [3703 3747])
+            ("run-scheme" function
+               (:user-visible-flag t
+                :arguments ("command-line"))
+                nil [3750 4046])
+            ("xscheme-start" function (:arguments ("command-line" "process-name" "buffer-name")) nil [4048 4359])
+            ("xscheme-read-command-line" function (:arguments ("arg")) nil [4361 4555])
+            ("xscheme-default-command-line" function nil nil [4557 4803])
+            ("reset-scheme" function (:user-visible-flag t) nil [4805 5392])
+            ("start-scheme" function
+               (:user-visible-flag t
+                :arguments ("buffer-name" "globally"))
+                nil [5444 6313])
+            ("fset" code nil nil [6315 6350])
+            ("global-set-scheme-interaction-buffer" function
+               (:user-visible-flag t
+                :arguments ("buffer-name"))
+                nil [6352 6982])
+            ("local-set-scheme-interaction-buffer" function
+               (:user-visible-flag t
+                :arguments ("buffer-name"))
+                nil [6984 7596])
+            ("local-clear-scheme-interaction-buffer" function (:user-visible-flag t) nil [7598 7986])
+            ("verify-xscheme-buffer" function (:arguments ("buffer-name" "localp")) nil [7990 8635])
+            ("scheme-interaction-mode" function
+               (:user-visible-flag t
+                :arguments ("preserve"))
+                nil [8661 13479])
+            ("exit-scheme-interaction-mode" function (:user-visible-flag t) nil [13481 14113])
+            ("scheme-interaction-mode-initialize" function nil nil [14115 14291])
+            ("scheme-interaction-mode-commands" function (:arguments ("keymap")) nil [14293 14530])
+            ("scheme-interaction-mode-commands-alist" variable nil nil [14532 14583])
+            ("setq" code nil nil [14584 14888])
+            ("scheme-interaction-mode-map" variable nil nil [14890 14930])
+            ("if" code nil nil [14931 15289])
+            ("xscheme-enter-interaction-mode" function nil nil [15291 15568])
+            ("fset" code nil nil [15570 15661])
+            ("scheme-debugger-mode" function nil nil [15684 16085])
+            ("scheme-debugger-mode-initialize" function nil nil [16087 16251])
+            ("scheme-debugger-mode-commands" function (:arguments ("keymap")) nil [16253 16449])
+            ("scheme-debugger-mode-map" variable nil nil [16451 16488])
+            ("if" code nil nil [16489 16765])
+            ("scheme-debugger-self-insert" function (:user-visible-flag t) nil [16767 16912])
+            ("xscheme-enter-debugger-mode" function (:arguments ("prompt-string")) nil [16914 17215])
+            ("xscheme-debugger-mode-p" function nil nil [17217 17397])
+            ("xscheme-send-string" function (:arguments ("strings")) nil [17426 18036])
+            ("xscheme-send-string-1" function (:arguments ("strings")) nil [18038 18241])
+            ("xscheme-send-string-2" function (:arguments ("string")) nil [18243 18480])
+            ("xscheme-select-process-buffer" function (:user-visible-flag t) nil [18482 18938])
+            ("xscheme-insert-expression" function (:arguments ("string")) nil [18971 19334])
+            ("xscheme-rotate-yank-pointer" function
+               (:user-visible-flag t
+                :arguments ("arg"))
+                nil [19336 19828])
+            ("xscheme-yank" function
+               (:user-visible-flag t
+                :arguments ("arg"))
+                nil [19830 20364])
+            ("fset" code nil nil [20417 20471])
+            ("xscheme-yank-pop" function
+               (:user-visible-flag t
+                :arguments ("arg"))
+                nil [20473 21429])
+            ("xscheme-yank-push" function
+               (:user-visible-flag t
+                :arguments ("arg"))
+                nil [21431 22058])
+            ("xscheme-send-region" function
+               (:user-visible-flag t
+                :arguments ("start" "end"))
+                nil [22061 22516])
+            ("xscheme-send-definition" function (:user-visible-flag t) nil [22518 22997])
+            ("xscheme-send-next-expression" function (:user-visible-flag t) nil [22999 23223])
+            ("xscheme-send-previous-expression" function (:user-visible-flag t) nil [23225 23449])
+            ("xscheme-send-current-line" function (:user-visible-flag t) nil [23452 23820])
+            ("xscheme-send-buffer" function (:user-visible-flag t) nil [23822 24078])
+            ("xscheme-send-char" function
+               (:user-visible-flag t
+                :arguments ("char"))
+                nil [24080 24280])
+            ("xscheme-delete-output" function (:user-visible-flag t) nil [24282 24868])
+            ("xscheme-send-breakpoint-interrupt" function (:user-visible-flag t) nil [24888 25034])
+            ("xscheme-send-proceed" function (:user-visible-flag t) nil [25036 25201])
+            ("xscheme-send-control-g-interrupt" function (:user-visible-flag t) nil [25203 25858])
+            ("xscheme-control-g-message-string" variable
+               (:constant-flag t
+                :default-value "Sending C-G interrupt to Scheme...")
+                nil [25860 25942])
+            ("xscheme-send-control-u-interrupt" function (:user-visible-flag t) nil [25944 26105])
+            ("xscheme-send-control-x-interrupt" function (:user-visible-flag t) nil [26107 26267])
+            ("xscheme-send-interrupt" function
+               (:user-visible-flag t
+                :arguments ("char" "mark-p"))
+                nil [26520 26832])
+            ("xscheme-process-command-line" variable nil nil [26860 26959])
+            ("xscheme-process-name" variable (:default-value "scheme") nil [26961 27066])
+            ("xscheme-buffer-name" variable (:default-value "*scheme*") nil [27068 27173])
+            ("xscheme-expressions-ring-max" variable
+               (:user-visible-flag t
+                :default-value 30)
+                nil [27175 27263])
+            ("xscheme-expressions-ring" variable nil nil [27265 27370])
+            ("xscheme-expressions-ring-yank-pointer" variable nil nil [27372 27502])
+            ("xscheme-last-input-end" variable nil nil [27504 27535])
+            ("xscheme-process-filter-state" variable (:default-value (quote idle)) nil [27537 27796])
+            ("xscheme-running-p" variable nil nil [27798 27956])
+            ("xscheme-control-g-synchronization-p" variable
+               (:constant-flag t
+                :default-value t)
+                nil [27958 28210])
+            ("xscheme-control-g-disabled-p" variable nil nil [28212 28398])
+            ("xscheme-allow-output-p" variable (:default-value t) nil [28400 28545])
+            ("xscheme-prompt" variable nil nil [28547 28611])
+            ("xscheme-string-accumulator" variable nil nil [28613 28722])
+            ("xscheme-string-receiver" variable nil nil [28724 28827])
+            ("default-xscheme-runlight" variable
+               (:constant-flag t
+                :default-value (quote (": " xscheme-runlight-string)))
+                nil [28829 28960])
+            ("xscheme-runlight" variable nil nil [28962 28990])
+            ("xscheme-runlight-string" variable nil nil [28991 29027])
+            ("xscheme-mode-string" variable nil nil [29028 29060])
+            ("setq-default" code nil nil [29061 29130])
+            ("mapcar" code nil nil [29132 29448])
+            ("xscheme-start-process" function (:arguments ("command-line" "the-process" "the-buffer")) nil [29479 30926])
+            ("xscheme-parse-command-line" function (:arguments ("string")) nil [30928 31449])
+            ("xscheme-wait-for-process" function nil nil [31452 31549])
+            ("xscheme-process-running-p" function nil nil [31551 31759])
+            ("xscheme-process-buffer" function nil nil [31761 31892])
+            ("xscheme-process-buffer-window" function nil nil [31894 32022])
+            ("xscheme-process-buffer-current-p" function nil nil [32024 32178])
+            ("xscheme-process-sentinel" function (:arguments ("proc" "reason")) nil [32202 32843])
+            ("xscheme-process-filter-initialize" function (:arguments ("running-p")) nil [32845 33606])
+            ("xscheme-process-filter" function (:arguments ("proc" "string")) nil [33608 35766])
+            ("xscheme-process-filter-output" function (:arguments ("args")) nil [35797 36566])
+            ("xscheme-guarantee-newlines" function (:arguments ("n")) nil [36568 36919])
+            ("xscheme-goto-output-point" function nil nil [36921 37093])
+            ("xscheme-modeline-initialize" function (:arguments ("name")) nil [37095 37406])
+            ("xscheme-set-runlight" function (:arguments ("runlight")) nil [37408 37709])
+            ("xscheme-process-filter-alist" variable (:default-value (quote ((65 xscheme-eval xscheme-process-filter:string-action-noexcursion) (68 xscheme-enter-debugger-mode xscheme-process-filter:string-action) (69 xscheme-eval xscheme-process-filter:string-action) (80 xscheme-set-prompt-variable xscheme-process-filter:string-action) (82 xscheme-enter-interaction-mode xscheme-process-filter:simple-action) (98 xscheme-start-gc xscheme-process-filter:simple-action) (99 xscheme-unsolicited-read-char xscheme-process-filter:simple-action) (101 xscheme-finish-gc xscheme-process-filter:simple-action) (102 xscheme-exit-input-wait xscheme-process-filter:simple-action) (103 xscheme-enable-control-g xscheme-process-filter:simple-action) (105 xscheme-prompt-for-expression xscheme-process-filter:string-action) (109 xscheme-message xscheme-process-filter:string-action) (110 xscheme-prompt-for-confirmation xscheme-process-filter:string-action) (111 xscheme-output-goto xscheme-process-filter:simple-action) (112 xscheme-set-prompt xscheme-process-filter:string-action) (115 xscheme-enter-input-wait xscheme-process-filter:simple-action) (118 xscheme-write-value xscheme-process-filter:string-action) (119 xscheme-cd xscheme-process-filter:string-action) (122 xscheme-display-process-buffer xscheme-process-filter:simple-action)))) nil [37744 39794])
+            ("xscheme-process-filter:simple-action" function (:arguments ("action")) nil [39797 39913])
+            ("xscheme-process-filter:string-action" function (:arguments ("action")) nil [39915 40101])
+            ("xscheme-process-filter:string-action-noexcursion" function (:arguments ("action")) nil [40103 40227])
+            ("xscheme-runlight:running" variable
+               (:constant-flag t
+                :default-value "run")
+                nil [40229 40334])
+            ("xscheme-runlight:input" variable
+               (:constant-flag t
+                :default-value "input")
+                nil [40336 40451])
+            ("xscheme-runlight:gc" variable
+               (:constant-flag t
+                :default-value "gc")
+                nil [40453 40563])
+            ("xscheme-start-gc" function nil nil [40565 40637])
+            ("xscheme-finish-gc" function nil nil [40639 40766])
+            ("xscheme-enter-input-wait" function nil nil [40768 40924])
+            ("xscheme-exit-input-wait" function nil nil [40926 41039])
+            ("xscheme-enable-control-g" function nil nil [41041 41206])
+            ("xscheme-display-process-buffer" function nil nil [41208 41517])
+            ("xscheme-unsolicited-read-char" function nil nil [41519 41565])
+            ("xscheme-eval" function (:arguments ("string")) nil [41568 41638])
+            ("xscheme-message" function (:arguments ("string")) nil [41640 41770])
+            ("xscheme-write-value" function (:arguments ("string")) nil [41772 41980])
+            ("xscheme-write-message-1" function (:arguments ("message-string" "output-string")) nil [41982 42369])
+            ("xscheme-set-prompt-variable" function (:arguments ("string")) nil [42371 42446])
+            ("xscheme-set-prompt" function (:arguments ("string")) nil [42448 42636])
+            ("xscheme-output-goto" function nil nil [42638 42731])
+            ("xscheme-coerce-prompt" function (:arguments ("string")) nil [42733 42958])
+            ("xscheme-cd" function (:arguments ("directory-string")) nil [42960 43084])
+            ("xscheme-prompt-for-confirmation" function (:arguments ("prompt-string")) nil [43087 43200])
+            ("xscheme-prompt-for-expression" function (:arguments ("prompt-string")) nil [43202 43359])
+            ("xscheme-prompt-for-expression-map" variable nil nil [43361 43407])
+            ("if" code nil nil [43408 43682])
+            ("xscheme-prompt-for-expression-exit" function nil nil [43684 43900])
+            ("xscheme-region-expression-p" function (:arguments ("start" "end")) nil [43902 44383])
+            ("xscheme" package nil nil [44385 44403]))          
+      :file "xscheme.el"
+      :pointmax 44430
+      :fsize 44429
+      :lastmodtime '(21171 28047 190053 62000)
+      :unmatched-syntax nil)
+    (semanticdb-table "git-modes.el"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("add-to-list" code nil nil [23 70]))          
+      :file "git-modes.el"
+      :pointmax 72
+      :fsize 71
+      :lastmodtime '(21171 28653 946703 686000)
+      :unmatched-syntax nil)
+    (semanticdb-table "haskell-mode.el"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("add-to-list" code nil nil [1 52])
+            ("haskell-mode-autoloads" include nil nil [53 86])
+            ("add-to-list" code nil nil [87 156])
+            ("add-hook" code nil nil [158 213])
+            ("add-hook" code nil nil [214 267]))          
+      :file "haskell-mode.el"
+      :pointmax 268
+      :fsize 267
+      :lastmodtime '(21177 28305 299586 612000)
+      :unmatched-syntax nil)
+    (semanticdb-table "org-mode.el"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("add-to-list" code nil nil [22 73])
+            ("add-to-list" code nil nil [74 133])
+            ("add-hook" code nil nil [135 179])
+            ("global-set-key" code nil nil [180 220])
+            ("global-set-key" code nil nil [221 257])
+            ("global-set-key" code nil nil [258 296])
+            ("custom-set-variables" code nil nil [298 406])
+            ("add-hook" code nil nil [408 619]))          
+      :file "org-mode.el"
+      :pointmax 621
+      :fsize 620
+      :lastmodtime '(21251 41088 17159 982000)
+      :unmatched-syntax nil)
+    (semanticdb-table "auto-complete-clang.el"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("add-to-list" code nil nil [33 90])
+            ("auto-complete-clang" include nil nil [91 121])
+            ("ac-cc-mode-clang-setup" function nil nil [123 547])
+            ("add-hook" code nil nil [549 603])
+            ("add-hook" code nil nil [604 660]))          
+      :file "auto-complete-clang.el"
+      :pointmax 661
+      :fsize 660
+      :lastmodtime '(21168 22508 816491 607000)
+      :unmatched-syntax nil)
+    (semanticdb-table "linum-off.el"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("add-to-list" code nil nil [1 48])
+            ("linum-off" include nil nil [50 70])
+            ("ede-off" include nil nil [71 89]))          
+      :file "linum-off.el"
+      :pointmax 90
+      :fsize 89
+      :lastmodtime '(21251 34044 67346 224000)
+      :unmatched-syntax '((semantic-list 71 . 82)))
+    (semanticdb-table "color-theme.el"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("add-to-list" code nil nil [25 80])
+            ("color-theme" include nil nil [81 103])
+            ("color-theme-initialize" code nil nil [104 128])
+            ("color-theme-matrix" code nil nil [129 149]))          
+      :file "color-theme.el"
+      :pointmax 150
+      :fsize 149
+      :lastmodtime '(21257 62262 76806 647000)
+      :unmatched-syntax nil))
+  :file "!home!cuoverkiller!.emacs.d!config!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,26 @@
+;; Object mode-off/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "mode-off/"
+  :tables
+  (list
+    (semanticdb-table "ede-off.el"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("ede-disabled-modes-list" variable
+               (:user-visible-flag t
+                :default-value (quote (org-mode)))
+                nil [2443 2549])
+            ("ede-disable-starred-buffers" variable
+               (:user-visible-flag t
+                :default-value (quote t))
+                nil [2550 2658])
+            ("ede-on" function nil nil [2660 3043])
+            ("ede-off" package nil nil [3045 3063]))          
+      :file "ede-off.el"
+      :pointmax 3161
+      :fsize 3160
+      :lastmodtime '(21251 32883 600710 240000)
+      :unmatched-syntax nil))
+  :file "!home!cuoverkiller!.emacs.d!mode-off!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

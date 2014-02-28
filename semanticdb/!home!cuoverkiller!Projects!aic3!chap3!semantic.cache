@@ -1,0 +1,469 @@
+;; Object chap3/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "chap3/"
+  :tables
+  (list
+    (semanticdb-table "node.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("NODE_H_" variable (:constant-flag t) nil [25 32])
+            ("item" type
+               (:typedef ("int")
+                :type "typedef")
+                nil [34 51])
+            ("link" type
+               (:typedef ("node" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :pointer 1
+                :type "typedef")
+                nil [52 78])
+            ("node" type
+               (:members 
+                  ( ("i" variable (:type ("item" type (:type "class") nil nil)) (reparse-symbol classsubparts) [98 105])
+                    ("next" variable (:type ("link" type (:type "class") nil nil)) (reparse-symbol classsubparts) [110 120]))                  
+                :type "struct")
+                nil [80 123])
+            ("double_linked_node" type
+               (:members 
+                  ( ("i" variable (:type ("item" type (:type "class") nil nil)) (reparse-symbol classsubparts) [157 164])
+                    ("prev" variable (:type ("link" type (:type "class") nil nil)) (reparse-symbol classsubparts) [169 185])
+                    ("next" variable (:type ("link" type (:type "class") nil nil)) (reparse-symbol classsubparts) [169 185]))                  
+                :type "struct")
+                nil [125 188]))          
+      :file "node.h"
+      :pointmax 211
+      :fsize 210
+      :lastmodtime '(21174 61710 893759 854000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("NODE_H_")
+          )
+)
+    (semanticdb-table "3.24.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("node.h" include nil nil [108 125])
+            ("count_node_num" function
+               (:arguments 
+                  ( ("head" variable (:type ("link" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [146 156]))                  
+                :type "int")
+                nil [127 310]))          
+      :file "3.24.c"
+      :pointmax 311
+      :fsize 310
+      :lastmodtime '(21170 60944 396389 461000)
+      :unmatched-syntax nil)
+    (semanticdb-table "3.25.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("node.h" include nil nil [108 125])
+            ("count_node_num_between" function
+               (:arguments 
+                  ( ("start" variable (:type ("link" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [154 165])
+                    ("end" variable (:type ("link" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [166 175]))                  
+                :type "int")
+                nil [127 370]))          
+      :file "3.25.c"
+      :pointmax 374
+      :fsize 373
+      :lastmodtime '(21170 60967 996388 836000)
+      :unmatched-syntax nil)
+    (semanticdb-table "3.26.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("node.h" include nil nil [108 125])
+            ("copy_linked_list" function
+               (:arguments 
+                  ( ("insertion_point" variable (:type ("link" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [148 169])
+                    ("head" variable (:type ("link" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [170 180]))                  
+                :type "int")
+                nil [127 404]))          
+      :file "3.26.c"
+      :pointmax 405
+      :fsize 399
+      :lastmodtime '(21171 943 319576 450000)
+      :unmatched-syntax nil)
+    (semanticdb-table "3.27.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("node.h" include nil nil [108 125])
+            ("move_link" function
+               (:arguments 
+                  ( ("insertion_point" variable (:type ("link" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [141 162])
+                    ("move_point" variable (:type ("link" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [163 179]))                  
+                :type "int")
+                nil [127 432]))          
+      :file "3.27.c"
+      :pointmax 433
+      :fsize 432
+      :lastmodtime '(21170 59987 483081 428000)
+      :unmatched-syntax nil)
+    (semanticdb-table "3.34.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("node.h" include nil nil [108 125])
+            ("comp_func" function
+               (:prototype-flag t
+                :function-pointer t
+                :arguments 
+                  ( ("" variable (:type ("item" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [152 157])
+                    ("" variable (:type ("item" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [158 163]))                  
+                :type "int")
+                nil [135 164])
+            ("move_max_to_tail" function
+               (:arguments 
+                  ( ("head" variable
+                       (:pointer 1
+                        :type ("link" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [187 198])
+                    ("comp" variable (:type ("comp_func" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [199 214]))                  
+                :type "int")
+                nil [166 561]))          
+      :file "3.34.c"
+      :pointmax 562
+      :fsize 561
+      :lastmodtime '(21170 64559 639627 207000)
+      :unmatched-syntax nil)
+    (semanticdb-table "3.35.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("node.h" include nil nil [108 125])
+            ("comp_func" function
+               (:prototype-flag t
+                :function-pointer t
+                :arguments 
+                  ( ("" variable (:type ("item" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [152 157])
+                    ("" variable (:type ("item" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [158 163]))                  
+                :type "int")
+                nil [135 164])
+            ("move_min_to_head" function
+               (:arguments 
+                  ( ("head" variable
+                       (:pointer 1
+                        :type ("link" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [187 198])
+                    ("comp" variable (:type ("comp_func" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [199 214]))                  
+                :type "int")
+                nil [166 556]))          
+      :file "3.35.c"
+      :pointmax 557
+      :fsize 556
+      :lastmodtime '(21170 63335 552992 904000)
+      :unmatched-syntax nil)
+    (semanticdb-table "3.36.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("node.h" include nil nil [108 125])
+            ("move_even_nodes" function
+               (:arguments 
+                  ( ("head" variable (:type ("link" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [147 157]))                  
+                :type "int")
+                nil [127 522]))          
+      :file "3.36.c"
+      :pointmax 523
+      :fsize 522
+      :lastmodtime '(21171 1292 156233 894000)
+      :unmatched-syntax nil)
+    (semanticdb-table "3.37.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("node.h" include nil nil [108 125])
+            ("exchange_node" function
+               (:arguments 
+                  ( ("a" variable (:type ("link" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [145 152])
+                    ("b" variable (:type ("link" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [153 160]))                  
+                :type "int")
+                nil [127 372]))          
+      :file "3.37.c"
+      :pointmax 373
+      :fsize 372
+      :lastmodtime '(21170 65452 299603 607000)
+      :unmatched-syntax nil)
+    (semanticdb-table "3.38.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("node.h" include nil nil [108 125])
+            ("copy" function
+               (:arguments 
+                  ( ("head" variable (:type ("link" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [137 147]))                  
+                :type ("link" type (:type "class") nil nil))
+                nil [127 430]))          
+      :file "3.38.c"
+      :pointmax 431
+      :fsize 430
+      :lastmodtime '(21171 2039 489547 468000)
+      :unmatched-syntax nil)
+    (semanticdb-table "3.39.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("node.h" include nil nil [108 125])
+            ("remove_func" function
+               (:prototype-flag t
+                :function-pointer t
+                :arguments 
+                  ( ("" variable (:type ("link" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [154 159]))                  
+                :type "int")
+                nil [135 160])
+            ("remove_if" function
+               (:arguments 
+                  ( ("head" variable
+                       (:pointer 1
+                        :type ("link" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [176 187])
+                    ("remove" variable (:type ("remove_func" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [188 207]))                  
+                :type "int")
+                nil [162 480]))          
+      :file "3.39.c"
+      :pointmax 481
+      :fsize 480
+      :lastmodtime '(21171 1491 202895 298000)
+      :unmatched-syntax nil)
+    (semanticdb-table "3.40.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("node.h" include nil nil [108 125])
+            ("remove_func" function
+               (:prototype-flag t
+                :function-pointer t
+                :arguments 
+                  ( ("" variable (:type ("link" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [154 159]))                  
+                :type "int")
+                nil [135 160])
+            ("remove_if_copy" function
+               (:arguments 
+                  ( ("head" variable (:type ("link" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [182 192])
+                    ("remove" variable (:type ("remove_func" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [193 212]))                  
+                :type ("link" type (:type "class") nil nil))
+                nil [162 552]))          
+      :file "3.40.c"
+      :pointmax 553
+      :fsize 552
+      :lastmodtime '(21171 2268 272874 752000)
+      :unmatched-syntax '((TYPEDEF 127 . 134) (TYPEDEF 127 . 134)))
+    (semanticdb-table "3.42.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("node.h" include nil nil [108 125])
+            ("comp_func" function
+               (:prototype-flag t
+                :function-pointer t
+                :arguments 
+                  ( ("" variable (:type ("item" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [152 157])
+                    ("" variable (:type ("item" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [158 163]))                  
+                :type "int")
+                nil [135 164])
+            ("insertion_sort" function
+               (:arguments 
+                  ( ("head" variable
+                       (:pointer 1
+                        :type ("link" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [186 197])
+                    ("comp" variable (:type ("comp_func" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [198 213]))                  
+                :type ("link" type (:type "class") nil nil))
+                nil [166 549]))          
+      :file "3.42.c"
+      :pointmax 550
+      :fsize 549
+      :lastmodtime '(21174 63477 140379 822000)
+      :unmatched-syntax nil)
+    (semanticdb-table "3.44.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("node.h" include nil nil [108 125])
+            ("exchange_double_linked_node" function
+               (:arguments 
+                  ( ("a" variable (:type ("link" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [159 166])
+                    ("b" variable (:type ("link" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [167 174]))                  
+                :type "int")
+                nil [127 478]))          
+      :file "3.44.c"
+      :pointmax 479
+      :fsize 478
+      :lastmodtime '(21174 62173 733747 616000)
+      :unmatched-syntax nil)
+    (semanticdb-table "3.47.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("node.h" include nil nil [108 125])
+            ("free_list" function
+               (:arguments 
+                  ( ("head" variable (:type ("link" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [142 152]))                  
+                :type "void")
+                nil [127 260]))          
+      :file "3.47.c"
+      :pointmax 261
+      :fsize 260
+      :lastmodtime '(21174 62513 197071 976000)
+      :unmatched-syntax nil)
+    (semanticdb-table "3.54.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("node.h" include nil nil [150 167])
+            ("FALSE" variable (:constant-flag t) nil [177 182])
+            ("FALSE" variable (:constant-flag t) nil [177 182])
+            ("TRUE" variable (:constant-flag t) nil [193 197])
+            ("different_nodes" function
+               (:arguments 
+                  ( ("head" variable (:type ("link" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [305 315]))                  
+                :type "int")
+                nil [285 759]))          
+      :file "3.54.c"
+      :pointmax 760
+      :fsize 759
+      :lastmodtime '(21175 1817 286944 2000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("TRUE" . ((punctuation "!" 199 . 200) (symbol "FALSE" 200 . 205)))
+          ("FALSE" . ((number "0" 183 . 184)))
+          ("HASHTABLE_SIZE" . ((number "65521" 229 . 234)))
+          )
+)
+    (semanticdb-table "3.55.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("node.h" include nil nil [108 125])
+            ("FALSE" variable (:constant-flag t) nil [135 140])
+            ("TRUE" variable (:constant-flag t) nil [151 155])
+            ("HASHTABLESIZE" variable (:constant-flag t) nil [171 184])
+            ("HASHTABLESIZE" variable (:constant-flag t) nil [171 184])
+            ("HASHTABLESIZE" variable (:constant-flag t) nil [171 184])
+            ("calc_route" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("head" variable (:type ("link" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [266 276])
+                    ("visited" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [277 290]))                  
+                :type "void")
+                nil [243 643])
+            ("end_with_same_loop" function
+               (:arguments 
+                  ( ("a" variable (:type ("link" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [668 675])
+                    ("b" variable (:type ("link" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [676 683]))                  
+                :type "int")
+                nil [645 1431]))          
+      :file "3.55.c"
+      :pointmax 1433
+      :fsize 1432
+      :lastmodtime '(21176 21310 904589 418000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("HASHTABLESIZE" . ((number "65521" 185 . 190)))
+          ("TRUE" . ((punctuation "!" 156 . 157) (symbol "FALSE" 157 . 162)))
+          ("FALSE" . ((number "0" 141 . 142)))
+          ("HASHTABLE_SIZE" . ((number "65521" 186 . 191)))
+          )
+)
+    (semanticdb-table "3.56.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("PRINTABLE_START" variable (:constant-flag t) nil [116 131])
+            ("PRINTABLE_END" variable (:constant-flag t) nil [143 156])
+            ("print_char_freq" function
+               (:arguments 
+                  ( ("str" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [183 193]))                  
+                :type "void")
+                nil [162 378]))          
+      :file "3.56.c"
+      :pointmax 379
+      :fsize 378
+      :lastmodtime '(21178 44527 397777 581000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("PRINTABLE_START" . ((number "32" 132 . 134)))
+          ("PRINTABLE_END" . ((number "127" 157 . 160)))
+          )
+)
+    (semanticdb-table "3.57.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("string.h" include (:system-flag t) nil [108 127])
+            ("FALSE" variable (:constant-flag t) nil [137 142])
+            ("TRUE" variable (:constant-flag t) nil [153 157])
+            ("check_palindrome" function
+               (:arguments 
+                  ( ("str" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [188 198]))                  
+                :type "void")
+                nil [166 469]))          
+      :file "3.57.c"
+      :pointmax 470
+      :fsize 469
+      :lastmodtime '(21178 54983 773227 452000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("TRUE" . ((punctuation "!" 158 . 159) (symbol "FALSE" 159 . 164)))
+          ("FALSE" . ((number "0" 143 . 144)))
+          )
+)
+    (semanticdb-table "3.59.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("string.h" include (:system-flag t) nil [108 127])
+            ("FALSE" variable (:constant-flag t) nil [137 142])
+            ("TRUE" variable (:constant-flag t) nil [153 157])
+            ("check_substr" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("str" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [190 200])
+                    ("str_len" variable (:type "int") (reparse-symbol arg-sub-list) [201 213])
+                    ("word" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [214 225])
+                    ("word_len" variable (:type "int") (reparse-symbol arg-sub-list) [226 239]))                  
+                :type "int")
+                nil [166 379])
+            ("search_words" function
+               (:arguments 
+                  ( ("str" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [399 409])
+                    ("word_seq" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [410 425]))                  
+                :type "void")
+                nil [381 806]))          
+      :file "3.59.c"
+      :pointmax 808
+      :fsize 807
+      :lastmodtime '(21178 58381 519804 285000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("TRUE" . ((punctuation "!" 158 . 159) (symbol "FALSE" 159 . 164)))
+          ("FALSE" . ((number "0" 143 . 144)))
+          )
+)
+    (semanticdb-table "3.60.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("compress_spaces" function
+               (:pointer 1
+                :arguments 
+                  ( ("str" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [130 140]))                  
+                :type "char")
+                nil [108 355]))          
+      :file "3.60.c"
+      :pointmax 356
+      :fsize 355
+      :lastmodtime '(21178 58676 619796 481000)
+      :unmatched-syntax nil))
+  :file "!home!cuoverkiller!Projects!aic3!chap3!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

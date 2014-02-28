@@ -1,0 +1,51 @@
+;; Object .emacs.d/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file ".emacs.d/"
+  :tables
+  (list
+    (semanticdb-table "init.el"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("custom-set-variables" code nil nil [12 1028])
+            ("blink-cursor-mode" code nil nil [1487 1508])
+            ("setq" code nil nil [1525 1543])
+            ("setq-default" code nil nil [1544 1579])
+            ("setq" code nil nil [1580 1603])
+            ("global-linum-mode" code nil nil [1613 1634])
+            ("setq" code nil nil [1645 1691])
+            ("global-hl-line-mode" code nil nil [1702 1725])
+            ("setq" code nil nil [1736 1764])
+            ("setq" code nil nil [1776 1801])
+            ("setq" code nil nil [1811 1862])
+            ("setq" code nil nil [1885 1925])
+            ("setq" code nil nil [1956 1990])
+            ("setq" code nil nil [2020 2040])
+            ("global-set-key" code nil nil [2096 2146])
+            ("global-set-key" code nil nil [2147 2194])
+            ("add-to-list" code nil nil [2225 2263])
+            ("load" code nil nil [2295 2323])
+            ("load" code nil nil [2348 2378])
+            ("load" code nil nil [2401 2429])
+            ("load" code nil nil [2456 2488])
+            ("load" code nil nil [2521 2559])
+            ("load" code nil nil [2578 2602])
+            ("load" code nil nil [2619 2641])
+            ("load" code nil nil [2667 2698])
+            ("load" code nil nil [2720 2747])
+            ("custom-set-faces" code nil nil [2952 3191]))          
+      :file "init.el"
+      :pointmax 3192
+      :fsize 3277
+      :lastmodtime '(21258 57849 418668 385000)
+      :unmatched-syntax nil)
+    (semanticdb-table "ede-projects.el"
+      :major-mode 'emacs-lisp-mode
+      :tags nil
+      :file "ede-projects.el"
+      :pointmax 86
+      :fsize 85
+      :lastmodtime '(21264 910 492402 123000)
+      :unmatched-syntax nil))
+  :file "!home!cuoverkiller!.emacs.d!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

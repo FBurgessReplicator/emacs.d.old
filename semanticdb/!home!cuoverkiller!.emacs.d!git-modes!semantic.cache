@@ -1,0 +1,124 @@
+;; Object git-modes/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "git-modes/"
+  :tables
+  (list
+    (semanticdb-table "git-commit-mode.el"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("log-edit" include nil nil [2262 2281])
+            ("ring" include nil nil [2282 2297])
+            ("server" include nil nil [2298 2315])
+            ("git-commit" customgroup (:user-visible-flag t) nil [2345 2451])
+            ("git-commit-confirm-commit" variable nil nil [2453 2819])
+            ("git-commit-mode-hook" variable (:default-value (quote (turn-on-auto-fill flyspell-mode))) nil [2821 3037])
+            ("git-commit-kill-buffer-hook" variable (:default-value (quote (git-commit-save-message))) nil [3039 3299])
+            ("git-commit-summary-max-length" variable (:default-value 50) nil [3301 3452])
+            ("git-commit-fill-column" variable (:default-value 72) nil [3454 3592])
+            ("git-commit-known-pseudo-headers" variable (:default-value (quote ("Signed-off-by" "Acked-by" "Cc" "Suggested-by" "Reported-by" "Tested-by" "Reviewed-by"))) nil [3594 3831])
+            ("git-commit-faces" customgroup (:user-visible-flag t) nil [3845 3984])
+            ("git-commit-summary-face" variable
+               (:default-value (quote ((t :inherit font-lock-type-face)))
+                :type "face")
+                nil [3986 4146])
+            ("git-commit-overlong-summary-face" variable
+               (:default-value (quote ((t :inherit font-lock-warning-face)))
+                :type "face")
+                nil [4148 4332])
+            ("git-commit-nonempty-second-line-face" variable
+               (:default-value (quote ((t :inherit font-lock-warning-face)))
+                :type "face")
+                nil [4334 4522])
+            ("git-commit-note-face" variable
+               (:default-value (quote ((t :inherit font-lock-string-face)))
+                :type "face")
+                nil [4524 4677])
+            ("git-commit-pseudo-header-face" variable
+               (:default-value (quote ((t :inherit font-lock-string-face)))
+                :type "face")
+                nil [4679 4851])
+            ("git-commit-known-pseudo-header-face" variable
+               (:default-value (quote ((t :inherit font-lock-keyword-face)))
+                :type "face")
+                nil [4853 5039])
+            ("git-commit-branch-face" variable
+               (:default-value (quote ((t :inherit font-lock-variable-name-face)))
+                :type "face")
+                nil [5041 5225])
+            ("git-commit-no-branch-face" variable
+               (:default-value (quote ((t :inherit git-commit-branch-face)))
+                :type "face")
+                nil [5227 5402])
+            ("git-commit-comment-heading-face" variable
+               (:default-value (quote ((t :inherit git-commit-known-pseudo-header-face)))
+                :type "face")
+                nil [5404 5617])
+            ("git-commit-comment-file-face" variable
+               (:default-value (quote ((t :inherit git-commit-pseudo-header-face)))
+                :type "face")
+                nil [5619 5817])
+            ("git-commit-comment-action-face" variable
+               (:default-value (quote ((t :inherit git-commit-branch-face)))
+                :type "face")
+                nil [5819 6028])
+            ("git-commit-mode-map" variable (:default-value (let ((map (make-sparse-keymap))) (define-key map (kbd "C-c C-c") (quote git-commit-commit)) (define-key map (kbd "C-c C-k") (quote git-commit-abort)) (define-key map (kbd "C-c C-s") (quote git-commit-signoff)) (define-key map (kbd "C-c C-a") (quote git-commit-ack)) (define-key map (kbd "C-c C-t") (quote git-commit-test)) (define-key map (kbd "C-c C-r") (quote git-commit-review)) (define-key map (kbd "C-c C-o") (quote git-commit-cc)) (define-key map (kbd "C-c C-p") (quote git-commit-reported)) (define-key map (kbd "C-c C-i") (quote git-commit-suggested)) (define-key map (kbd "C-c M-s") (quote git-commit-save-message)) (define-key map (kbd "M-p") (quote git-commit-prev-message)) (define-key map (kbd "M-n") (quote git-commit-next-message)) (define-key map [remap server-edit] (quote git-commit-commit)) (define-key map [remap kill-buffer] (quote git-commit-abort)) (define-key map [remap ido-kill-buffer] (quote git-commit-abort)) (define-key map [remap iswitchb-kill-buffer] (quote git-commit-abort)) (define-key map (kbd "C-c C-x s") (quote git-commit-signoff)) (define-key map (kbd "C-c C-x a") (quote git-commit-ack)) (define-key map (kbd "C-c C-x t") (quote git-commit-test)) (define-key map (kbd "C-c C-x r") (quote git-commit-review)) (define-key map (kbd "C-c C-x o") (quote git-commit-cc)) (define-key map (kbd "C-c C-x p") (quote git-commit-reported)) map)) nil [6042 7494])
+            ("easymenu" include nil nil [7506 7525])
+            ("easy-menu-define" code nil nil [7526 8411])
+            ("git-commit-commit-hook" variable nil nil [8429 8568])
+            ("git-commit-previous-winconf" variable nil nil [8570 8610])
+            ("git-commit-restore-previous-winconf" function (:arguments ("body")) nil [8612 9223])
+            ("git-commit-commit" function
+               (:user-visible-flag t
+                :arguments ("force"))
+                nil [9225 10177])
+            ("git-commit-abort" function (:user-visible-flag t) nil [10179 10979])
+            ("git-commit-buffer-clients" function nil nil [10981 11116])
+            ("git-commit-save-message" function (:user-visible-flag t) nil [11131 11591])
+            ("git-commit-prev-message" function
+               (:user-visible-flag t
+                :arguments ("arg"))
+                nil [11593 11935])
+            ("git-commit-next-message" function
+               (:user-visible-flag t
+                :arguments ("arg"))
+                nil [11937 12156])
+            ("git-commit-find-pseudo-header-position" function nil nil [12171 12811])
+            ("git-commit-determine-pre-for-pseudo-header" function nil nil [12813 13864])
+            ("git-commit-insert-header" function (:arguments ("type" "name" "email")) nil [13866 14466])
+            ("git-commit-insert-header-as-self" function (:arguments ("type")) nil [14468 15073])
+            ("git-define-git-commit-self" function (:arguments ("action" "header")) nil [15075 15643])
+            ("git-define-git-commit-self" code nil nil [15645 15694])
+            ("git-define-git-commit-self" code nil nil [15695 15747])
+            ("git-define-git-commit-self" code nil nil [15748 15802])
+            ("git-define-git-commit-self" code nil nil [15803 15853])
+            ("git-define-git-commit" function (:arguments ("action" "header")) nil [15855 16537])
+            ("git-define-git-commit" code nil nil [16539 16579])
+            ("git-define-git-commit" code nil nil [16580 16629])
+            ("git-define-git-commit" code nil nil [16630 16680])
+            ("git-commit-comment-headings-alist" variable
+               (:constant-flag t
+                :default-value (quote (("Not currently on any branch." . git-commit-no-branch-face) ("Changes to be committed:" . git-commit-comment-heading-face) ("Untracked files:" . git-commit-comment-heading-face) ("Changed but not updated:" . git-commit-comment-heading-face) ("Changes not staged for commit:" . git-commit-comment-heading-face) ("Unmerged paths:" . git-commit-comment-heading-face))))
+                nil [16682 17283])
+            ("git-commit-summary-regexp" function nil nil [17285 17872])
+            ("git-commit-has-style-errors-p" function nil nil [17874 18267])
+            ("git-commit-mode-summary-font-lock-keywords" function (:arguments ("errors")) nil [18284 18750])
+            ("git-commit-mode-heading-keywords" function nil nil [18752 19139])
+            ("git-commit-mode-font-lock-keywords" function nil nil [19141 20044])
+            ("git-commit-font-lock-diff" function nil nil [20046 21123])
+            ("git-commit-mode-syntax-table" variable (:default-value (let ((table (make-syntax-table text-mode-syntax-table))) (modify-syntax-entry 35 "<" table) (modify-syntax-entry 10 ">" table) (modify-syntax-entry 13 ">" table) table)) nil [21135 21407])
+            ("define-derived-mode" code nil nil [21424 23512])
+            ("git-commit-kill-buffer-noop" function nil nil [23514 23672])
+            ("git-commit-mode-flyspell-verify" function nil nil [23674 23746])
+            ("eval-after-load" code nil nil [23771 23890])
+            ("dolist" code nil nil [23907 24128])
+            ("git-commit-auto-mode-enable" function nil nil [24130 24246])
+            ("make-obsolete" code nil nil [24247 24320])
+            ("git-commit-mode" package nil nil [24322 24348]))          
+      :file "git-commit-mode.el"
+      :pointmax 24435
+      :fsize 24434
+      :lastmodtime '(21171 28586 96705 481000)
+      :unmatched-syntax nil))
+  :file "!home!cuoverkiller!.emacs.d!git-modes!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

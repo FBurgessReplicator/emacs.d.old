@@ -1,0 +1,2689 @@
+;; Object compiler/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "compiler/"
+  :tables
+  (list
+    (semanticdb-table "parser.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("general_header.h" include nil nil [121 148])
+            ("parser_def.h" include nil nil [150 173])
+            ("parser_init.h" include nil nil [174 198])
+            ("semantic_actions.h" include nil nil [199 228])
+            ("scanner.h" include nil nil [229 249])
+            ("nonterms" variable
+               (:dereference 1
+                :type ("nonterminal" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [282 325])
+            ("parsing_stack" variable
+               (:dereference 1
+                :type ("grammar_symbol" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [326 376])
+            ("codelist" variable
+               (:dereference 1
+                :type ("intermediate_code" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [377 427])
+            ("stacktop" variable (:type "int") nil [428 473])
+            ("codelistlen" variable (:type "int") nil [428 473])
+            ("tempnum" variable (:type "int") nil [428 473])
+            ("labelnum" variable (:type "int") nil [428 473])
+            ("push" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("sym" variable (:type ("grammar_symbol" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol arg-sub-list) [538 564])
+                    ("level" variable (:type "int") (reparse-symbol arg-sub-list) [565 575]))                  
+                :type "void")
+                nil [521 639])
+            ("pop" function
+               (:typemodifiers ("static")
+                :type ("grammar_symbol" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [641 717])
+            ("get_top" function
+               (:typemodifiers ("static")
+                :type ("grammar_symbol" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [719 797])
+            ("exec_terminal_copying" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("thistoken" variable (:type ("token" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol arg-sub-list) [833 856])
+                    ("func" variable (:type ("terminal_copying_func" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [857 884]))                  
+                :type "void")
+                nil [799 921])
+            ("exec_action" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("sym" variable (:type ("grammar_symbol" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol arg-sub-list) [947 973])
+                    ("func" variable (:type ("action_func" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [974 991]))                  
+                :type "void")
+                nil [923 1022])
+            ("predictive_parse" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("startsym" variable (:type ("grammar_symbol" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol arg-sub-list) [1052 1083]))                  
+                :type "int")
+                nil [1024 4075])
+            ("parse" function
+               (:arguments 
+                  ( ("filename" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4087 4102]))                  
+                :type "int")
+                nil [4077 4524]))          
+      :file "parser.c"
+      :pointmax 4525
+      :fsize 4524
+      :lastmodtime '(21168 48509 629137 478000)
+      :unmatched-syntax nil)
+    (semanticdb-table "general_header.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("GENERAL_HEADER_H_" variable (:constant-flag t) nil [181 198])
+            ("ctype.h" include (:system-flag t) nil [200 218])
+            ("math.h" include (:system-flag t) nil [219 236])
+            ("stdarg.h" include (:system-flag t) nil [237 256])
+            ("stdio.h" include (:system-flag t) nil [257 275])
+            ("stdlib.h" include (:system-flag t) nil [276 295])
+            ("string.h" include (:system-flag t) nil [296 315])
+            ("FALSE" variable (:constant-flag t) nil [325 330])
+            ("TRUE" variable (:constant-flag t) nil [341 345])
+            ("MAXLINE" variable (:constant-flag t) nil [361 368]))          
+      :file "general_header.h"
+      :pointmax 406
+      :fsize 405
+      :lastmodtime '(21159 11737 940360 567000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("GENERAL_HEADER_H_")
+          ("TRUE" . ((punctuation "!" 346 . 347) (symbol "FALSE" 347 . 352)))
+          ("FALSE" . ((number "0" 331 . 332)))
+          ("MAXLINE" . ((number "4096" 369 . 373)))
+          )
+)
+    (semanticdb-table "parser_def.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("PARSER_DEF_H_" variable (:constant-flag t) nil [31 44])
+            ("MAXTEMPBITS" variable (:constant-flag t) nil [54 65])
+            ("MAXLABELBITS" variable (:constant-flag t) nil [76 88])
+            ("MAXPRODUCTIONLEN" variable (:constant-flag t) nil [99 115])
+            ("MAXNONTERMNUM" variable (:constant-flag t) nil [127 140])
+            ("MAXTERMINALNUM" variable (:constant-flag t) nil [152 166])
+            ("MAXCODELEN" variable (:constant-flag t) nil [178 188])
+            ("MAXSTACKSIZE" variable (:constant-flag t) nil [200 212])
+            ("MAXCODELISTLEN" variable (:constant-flag t) nil [225 239])
+            ("TERMINAL" variable (:constant-flag t) nil [292 300])
+            ("NONTERM" variable (:constant-flag t) nil [311 318])
+            ("NONTERM_COPYING" variable (:constant-flag t) nil [329 344])
+            ("INTERMEDIATE_ACTION" variable (:constant-flag t) nil [355 374])
+            ("ULTIMATE_ACTION" variable (:constant-flag t) nil [385 400])
+            ("PENDING" variable (:constant-flag t) nil [473 480])
+            ("NO" variable (:constant-flag t) nil [491 493])
+            ("YES" variable (:constant-flag t) nil [504 507])
+            ("PARSING_ERROR" variable (:constant-flag t) nil [548 561])
+            ("PARSING_OK" variable (:constant-flag t) nil [573 583])
+            ("" type
+               (:members 
+                  ( ("PROG" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [633 638])
+                    ("STMTBLOCK" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [639 649])
+                    ("STMTLIST" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [650 659])
+                    ("STMT" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [660 665])
+                    ("ASSIGNSTMT" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [666 677])
+                    ("CONDSTMT" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [678 687])
+                    ("LOOPSTMT" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [688 697])
+                    ("ELSECLAUSE" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [698 709])
+                    ("EXPR" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [716 721])
+                    ("EXPR_" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [722 728])
+                    ("COND" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [729 734])
+                    ("REOP" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [735 740])
+                    ("TERM" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [741 746])
+                    ("TERM_" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [747 753])
+                    ("FACTOR" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [754 761])
+                    ("FACTOR_" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [762 770])
+                    ("NONTERMNUM" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [771 783]))                  
+                :type "enum")
+                nil [622 784])
+            ("token" type
+               (:prototype t
+                :type "struct")
+                nil [786 799])
+            ("grammar_symbol" type
+               (:prototype t
+                :type "struct")
+                nil [800 822])
+            ("terminal_copying_func" function
+               (:prototype-flag t
+                :function-pointer t
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("token" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [922 943]))                  
+                :type "void")
+                nil [892 944])
+            ("action_func" function
+               (:prototype-flag t
+                :function-pointer t
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [973 1003]))                  
+                :type "void")
+                nil [953 1004])
+            ("grammar_symbol" type
+               (:members 
+                  ( ("type" variable (:type "int") (reparse-symbol classsubparts) [1034 1056])
+                    ("code" variable (:type "int") (reparse-symbol classsubparts) [1034 1056])
+                    ("level" variable (:type "int") (reparse-symbol classsubparts) [1034 1056])
+                    ("attribute" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [1061 1086])
+                    ("action" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [1061 1086]))                  
+                :type "struct")
+                nil [1006 1089])
+            ("intermediate_code" type
+               (:members 
+                  ( ("code" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [1122 1133]))                  
+                :type "struct")
+                nil [1091 1136])
+            ("production" type
+               (:members 
+                  ( ("len" variable (:type "int") (reparse-symbol classsubparts) [1162 1203])
+                    ("nullable" variable (:type "int") (reparse-symbol classsubparts) [1162 1203])
+                    ("FIRST" variable
+                       (:dereference 1
+                        :type "int")
+                        (reparse-symbol classsubparts) [1162 1203])
+                    ("literal" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [1208 1228])
+                    ("symlist" variable
+                       (:dereference 1
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1233 1281])
+                    ("next" variable
+                       (:pointer 1
+                        :type ("production" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1286 1310])
+                    ("expanding_action" variable (:type ("action_func" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1315 1344]))                  
+                :type "struct")
+                nil [1138 1347])
+            ("nonterminal" type
+               (:members 
+                  ( ("code" variable (:type "int") (reparse-symbol classsubparts) [1374 1416])
+                    ("nullable" variable (:type "int") (reparse-symbol classsubparts) [1374 1416])
+                    ("FIRST" variable
+                       (:dereference 1
+                        :type "int")
+                        (reparse-symbol classsubparts) [1374 1416])
+                    ("literal" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [1421 1441])
+                    ("productions" variable
+                       (:pointer 1
+                        :type ("production" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1446 1523])
+                    ("p_last_production" variable
+                       (:pointer 2
+                        :type ("production" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1446 1523])
+                    ("select" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type ("production" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1446 1523]))                  
+                :type "struct")
+                nil [1349 1526]))          
+      :file "parser_def.h"
+      :pointmax 1556
+      :fsize 1555
+      :lastmodtime '(21170 6988 660011 14000)
+      :unmatched-syntax '((TYPEDEF 945 . 952) (TYPEDEF 884 . 891) (TYPEDEF 945 . 952) (TYPEDEF 884 . 891))
+      :lexical-table 
+        '(("NONTERM_COPYING" . ((number "2" 345 . 346)))
+          ("NO" . ((number "1" 494 . 495)))
+          ("PENDING" . ((number "0" 481 . 482)))
+          ("ULTIMATE_ACTION" . ((number "4" 401 . 402)))
+          ("PARSING_OK" . ((number "0" 584 . 585)))
+          ("MAXLABELBITS" . ((number "8" 89 . 90)))
+          ("PARSER_DEF_H_")
+          ("MAXTEMPBITS" . ((number "8" 66 . 67)))
+          ("MAXNONTERMNUM" . ((number "32" 141 . 143)))
+          ("INTERMEDIATE_ACTION" . ((number "3" 375 . 376)))
+          ("MAXCODELEN" . ((number "64" 189 . 191)))
+          ("MAXSTACKSIZE" . ((number "256" 213 . 216)))
+          ("TERMINAL" . ((number "0" 301 . 302)))
+          ("MAXCODELISTLEN" . ((number "1024" 240 . 244)))
+          ("NONTERM" . ((number "1" 319 . 320)))
+          ("PARSING_ERROR" . ((punctuation "-" 562 . 563) (number "1" 563 . 564)))
+          ("MAXPRODUCTIONLEN" . ((number "16" 116 . 118)))
+          ("MAXTERMINALNUM" . ((number "64" 167 . 169)))
+          ("YES" . ((number "2" 508 . 509)))
+          )
+)
+    (semanticdb-table "parser_init.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("PARSER_INIT_H_" variable (:constant-flag t) nil [32 46])
+            ("init_parser" function
+               (:prototype-flag t
+                :type "void")
+                nil [48 67]))          
+      :file "parser_init.h"
+      :pointmax 97
+      :fsize 96
+      :lastmodtime '(21168 9299 479374 333000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("PARSER_INIT_H_")
+          )
+)
+    (semanticdb-table "semantic_actions.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("PARSER_ACTION_H_" variable (:constant-flag t) nil [34 50])
+            ("COPY_NONTERM" variable (:constant-flag t) nil [60 72])
+            ("COPY_TERMINAL" variable (:constant-flag t) nil [275 288])
+            ("ADD_ATTR_TO_SYMBOL" variable (:constant-flag t) nil [466 484])
+            ("token" type
+               (:prototype t
+                :type "struct")
+                nil [588 601])
+            ("grammar_symbol" type
+               (:prototype t
+                :type "struct")
+                nil [602 624])
+            ("assignstmt_attribute" type
+               (:members 
+                  ( ("id" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [694 718])
+                    ("final_result" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [694 718]))                  
+                :type "struct")
+                nil [660 721])
+            ("condstmt_attribute" type
+               (:members 
+                  ( ("condcode" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [755 809])
+                    ("then_label" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [755 809])
+                    ("else_label" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [755 809])
+                    ("next_label" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [755 809]))                  
+                :type "struct")
+                nil [723 812])
+            ("loopstmt_attribute" type
+               (:members 
+                  ( ("condcode" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [846 875])
+                    ("start_label" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [846 875]))                  
+                :type "struct")
+                nil [814 878])
+            ("cond_attribute" type
+               (:members 
+                  ( ("code" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [908 933])
+                    ("lopd" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [908 933])
+                    ("ropd" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [908 933])
+                    ("reop" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [938 949]))                  
+                :type "struct")
+                nil [880 952])
+            ("expr_attribute" type
+               (:members 
+                  ( ("final_result" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [982 1001]))                  
+                :type "struct")
+                nil [954 1004])
+            ("expr__attribute" type
+               (:members 
+                  ( ("lopd" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [1035 1085])
+                    ("ropd" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [1035 1085])
+                    ("op" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [1035 1085])
+                    ("im_result" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [1035 1085])
+                    ("final_result" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [1035 1085]))                  
+                :type "struct")
+                nil [1006 1088])
+            ("term_attribute" type
+               (:members 
+                  ( ("final_result" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [1118 1137]))                  
+                :type "struct")
+                nil [1090 1140])
+            ("term__attribute" type
+               (:members 
+                  ( ("lopd" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [1171 1221])
+                    ("ropd" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [1171 1221])
+                    ("op" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [1171 1221])
+                    ("im_result" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [1171 1221])
+                    ("final_result" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [1171 1221]))                  
+                :type "struct")
+                nil [1142 1224])
+            ("factor_attribute" type
+               (:members 
+                  ( ("sign" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [1256 1294])
+                    ("im_result" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [1256 1294])
+                    ("final_result" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [1256 1294]))                  
+                :type "struct")
+                nil [1226 1297])
+            ("factor__attribute" type
+               (:members 
+                  ( ("final_result" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [1330 1349]))                  
+                :type "struct")
+                nil [1299 1352])
+            ("reop_attribute" type
+               (:members 
+                  ( ("reop" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [1382 1393]))                  
+                :type "struct")
+                nil [1354 1396])
+            ("assignstmt_id_copying" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("srctoken" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("token" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1471 1500]))                  
+                :type "void")
+                nil [1444 1501])
+            ("assignstmt_expr_copying" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("srcsym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1532 1568]))                  
+                :type "void")
+                nil [1503 1569])
+            ("condstmt_cond_copying" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("srcsym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1598 1634]))                  
+                :type "void")
+                nil [1571 1635])
+            ("loopstmt_cond_copying" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("srcsym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1664 1700]))                  
+                :type "void")
+                nil [1637 1701])
+            ("cond_lexpr_copying" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("srcsym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1727 1763]))                  
+                :type "void")
+                nil [1703 1764])
+            ("cond_reop_copying" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("srcsym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1789 1825]))                  
+                :type "void")
+                nil [1766 1826])
+            ("cond_rexpr_copying" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("srcsym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1852 1888]))                  
+                :type "void")
+                nil [1828 1889])
+            ("expr_term_copying" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("srcsym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1914 1950]))                  
+                :type "void")
+                nil [1891 1951])
+            ("expr_expr__copying" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("srcsym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1977 2013]))                  
+                :type "void")
+                nil [1953 2014])
+            ("expr__starting_op_copying" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("srctoken" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("token" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2047 2076]))                  
+                :type "void")
+                nil [2016 2077])
+            ("expr__term_copying" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("srcsym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2103 2139]))                  
+                :type "void")
+                nil [2079 2140])
+            ("expr__expr__copying" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("srcsym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2167 2203]))                  
+                :type "void")
+                nil [2142 2204])
+            ("term_factor_copying" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("srcsym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2231 2267]))                  
+                :type "void")
+                nil [2206 2268])
+            ("term_term__copying" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("srcsym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2294 2330]))                  
+                :type "void")
+                nil [2270 2331])
+            ("term__starting_op_copying" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("srctoken" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("token" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2364 2393]))                  
+                :type "void")
+                nil [2333 2394])
+            ("term__factor_copying" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("srcsym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2422 2458]))                  
+                :type "void")
+                nil [2396 2459])
+            ("term__term__copying" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("srcsym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2486 2522]))                  
+                :type "void")
+                nil [2461 2523])
+            ("factor_sign_copying" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("srctoken" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("token" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2550 2579]))                  
+                :type "void")
+                nil [2525 2580])
+            ("factor_factor_copying" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("srcsym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2609 2645]))                  
+                :type "void")
+                nil [2582 2646])
+            ("factor_factor__copying" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("srcsym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2676 2712]))                  
+                :type "void")
+                nil [2648 2713])
+            ("factor__id_num_copying" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("srctoken" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("token" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2743 2772]))                  
+                :type "void")
+                nil [2715 2773])
+            ("factor__expr_copying" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("srcsym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2801 2837]))                  
+                :type "void")
+                nil [2775 2838])
+            ("reop_copying" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("srctoken" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("token" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2858 2887]))                  
+                :type "void")
+                nil [2840 2888])
+            ("assignstmt_expanding" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("sym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2955 2988]))                  
+                :type "void")
+                nil [2929 2989])
+            ("condstmt_expanding" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("sym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3015 3048]))                  
+                :type "void")
+                nil [2991 3049])
+            ("loopstmt_expanding" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("sym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3075 3108]))                  
+                :type "void")
+                nil [3051 3109])
+            ("cond_expanding" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("sym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3131 3164]))                  
+                :type "void")
+                nil [3111 3165])
+            ("expr_expanding" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("sym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3187 3220]))                  
+                :type "void")
+                nil [3167 3221])
+            ("expr__expanding" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("sym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3244 3277]))                  
+                :type "void")
+                nil [3223 3278])
+            ("term_expanding" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("sym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3300 3333]))                  
+                :type "void")
+                nil [3280 3334])
+            ("term__expanding" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("sym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3358 3391]))                  
+                :type "void")
+                nil [3337 3392])
+            ("factor_sign_expanding" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("sym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3421 3454]))                  
+                :type "void")
+                nil [3394 3455])
+            ("factor_factor__expanding" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("sym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3487 3520]))                  
+                :type "void")
+                nil [3457 3521])
+            ("factor__id_num_expanding" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("sym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3553 3586]))                  
+                :type "void")
+                nil [3523 3587])
+            ("factor__expr_expanding" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("sym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3617 3650]))                  
+                :type "void")
+                nil [3589 3651])
+            ("reop_expanding" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("sym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3673 3706]))                  
+                :type "void")
+                nil [3653 3707])
+            ("condstmt_then_action" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("sym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3772 3805]))                  
+                :type "void")
+                nil [3746 3806])
+            ("condstmt_else_action" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("sym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3834 3867]))                  
+                :type "void")
+                nil [3808 3868])
+            ("loopstmt_do_action" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("sym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3894 3927]))                  
+                :type "void")
+                nil [3870 3928])
+            ("expr__print_action" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("sym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3954 3987]))                  
+                :type "void")
+                nil [3930 3988])
+            ("term__print_action" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("sym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4014 4047]))                  
+                :type "void")
+                nil [3990 4048])
+            ("assignstmt_ultimate_action" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("sym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4115 4148]))                  
+                :type "void")
+                nil [4083 4149])
+            ("condstmt_ultimate_action" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("sym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4181 4214]))                  
+                :type "void")
+                nil [4151 4215])
+            ("loopstmt_ultimate_action" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("sym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4247 4280]))                  
+                :type "void")
+                nil [4217 4281])
+            ("cond_ultimate_action" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("sym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4309 4342]))                  
+                :type "void")
+                nil [4283 4343])
+            ("factor_ultimate_action" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("sym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4373 4406]))                  
+                :type "void")
+                nil [4345 4407]))          
+      :file "semantic_actions.h"
+      :pointmax 4439
+      :fsize 4438
+      :lastmodtime '(21168 10351 162679 861000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("PARSER_ACTION_H_")
+          ("COPY_NONTERM" (spp-arg-list ("RELPOS" "SRCSYM" "SRCTYPE" "SRCFIELD" "DSTTYPE" "DSTFIELD") 72 . 126) . 
+              ((semantic-list "((struct DSTTYPE *)parsing_stack[stacktop - RELPOS].attribute)" 133 . 195) (punctuation "-" 195 . 196) (punctuation ">" 196 . 197) (symbol "DSTFIELD" 197 . 205) (punctuation "=" 206 . 207) (semantic-list "((struct SRCTYPE *)SRCSYM->attribute)" 218 . 255) (punctuation "-" 255 . 256) (punctuation ">" 256 . 257) (symbol "SRCFIELD" 257 . 265)))
+          ("COPY_TERMINAL" (spp-arg-list ("RELPOS" "SRCTOKEN" "SRCFIELD" "DSTTYPE" "DSTFIELD") 288 . 335) . 
+              ((semantic-list "((struct DSTTYPE *)parsing_stack[stacktop - RELPOS].attribute)" 342 . 404) (punctuation "-" 404 . 405) (punctuation ">" 405 . 406) (symbol "DSTFIELD" 406 . 414) (punctuation "=" 415 . 416) (symbol "SRCTOKEN" 427 . 435) (punctuation "-" 435 . 436) (punctuation ">" 436 . 437) (symbol "attribute" 437 . 446) (punctuation "-" 446 . 447) (punctuation ">" 447 . 448) (symbol "SRCFIELD" 448 . 456)))
+          ("ADD_ATTR_TO_SYMBOL" (spp-arg-list ("RELPOS" "DSTTYPE") 484 . 501) . 
+              ((symbol "parsing_stack" 508 . 521) (semantic-list "[stacktop - RELPOS]" 521 . 540) (punctuation "." 540 . 541) (symbol "attribute" 541 . 550) (punctuation "=" 551 . 552) (symbol "calloc" 553 . 559) (semantic-list "(1, sizeof(struct DSTTYPE))" 559 . 586)))
+          )
+)
+    (semanticdb-table "scanner.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("SCANNER_H_" variable (:constant-flag t) nil [147 157])
+            ("general_header.h" include nil nil [159 186])
+            ("ERROR" variable (:constant-flag t) nil [225 230])
+            ("END" variable (:constant-flag t) nil [242 245])
+            ("MAIN" variable (:constant-flag t) nil [256 260])
+            ("INT" variable (:constant-flag t) nil [271 274])
+            ("FLOAT" variable (:constant-flag t) nil [285 290])
+            ("DOUBLE" variable (:constant-flag t) nil [301 307])
+            ("CHAR" variable (:constant-flag t) nil [318 322])
+            ("IF" variable (:constant-flag t) nil [333 335])
+            ("ELSE" variable (:constant-flag t) nil [346 350])
+            ("DO" variable (:constant-flag t) nil [361 363])
+            ("WHILE" variable (:constant-flag t) nil [374 379])
+            ("ID" variable (:constant-flag t) nil [390 392])
+            ("NUMBER" variable (:constant-flag t) nil [404 410])
+            ("EQ" variable (:constant-flag t) nil [422 424])
+            ("PLUS" variable (:constant-flag t) nil [436 440])
+            ("MINUS" variable (:constant-flag t) nil [452 457])
+            ("MULTIPLY" variable (:constant-flag t) nil [469 477])
+            ("DIVIDE" variable (:constant-flag t) nil [489 495])
+            ("LRBRACKET" variable (:constant-flag t) nil [507 516])
+            ("RRBRACKET" variable (:constant-flag t) nil [528 537])
+            ("LBRACE" variable (:constant-flag t) nil [549 555])
+            ("RBRACE" variable (:constant-flag t) nil [567 573])
+            ("COMMA" variable (:constant-flag t) nil [585 590])
+            ("SEMICOLON" variable (:constant-flag t) nil [602 611])
+            ("GT" variable (:constant-flag t) nil [623 625])
+            ("GE" variable (:constant-flag t) nil [637 639])
+            ("LT" variable (:constant-flag t) nil [651 653])
+            ("LE" variable (:constant-flag t) nil [665 667])
+            ("DOUBLEEQ" variable (:constant-flag t) nil [679 687])
+            ("NOTEQ" variable (:constant-flag t) nil [699 704])
+            ("LSBRACKET" variable (:constant-flag t) nil [716 725])
+            ("RSBRACKET" variable (:constant-flag t) nil [737 746])
+            ("TERMINALNUM" variable (:constant-flag t) nil [758 769])
+            ("number" type
+               (:members 
+                  ( ("base" variable (:type "double") (reparse-symbol classsubparts) [794 825])
+                    ("exp" variable (:type "double") (reparse-symbol classsubparts) [794 825])
+                    ("actual_value" variable (:type "double") (reparse-symbol classsubparts) [794 825])
+                    ("base_decibits" variable (:type "int") (reparse-symbol classsubparts) [830 857])
+                    ("exp_sym" variable (:type "int") (reparse-symbol classsubparts) [830 857]))                  
+                :type "struct")
+                nil [774 860])
+            ("dfa_state_vars" type
+               (:members 
+                  ( ("lexeme" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [890 903])
+                    ("length" variable (:type "int") (reparse-symbol classsubparts) [908 919])
+                    ("value" variable (:type ("number" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [924 944]))                  
+                :type "struct")
+                nil [862 947])
+            ("token" type
+               (:members 
+                  ( ("code" variable (:type "int") (reparse-symbol classsubparts) [968 977])
+                    ("attribute" variable
+                       (:pointer 1
+                        :type ("dfa_state_vars" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [982 1015]))                  
+                :type "struct")
+                nil [949 1018])
+            ("init_scanner" function
+               (:prototype-flag t
+                :type "void")
+                nil [1020 1040])
+            ("openfile" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("path" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1055 1066]))                  
+                :type "int")
+                nil [1042 1067])
+            ("get_token" function
+               (:prototype-flag t
+                :type ("token" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [1069 1094]))          
+      :file "scanner.h"
+      :pointmax 1120
+      :fsize 1119
+      :lastmodtime '(21158 62400 374087 159000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("END" . ((number "0" 246 . 247)))
+          ("INT" . ((number "2" 275 . 276)))
+          ("WHILE" . ((number "9" 380 . 381)))
+          ("RRBRACKET" . ((number "27" 538 . 540)))
+          ("LT" . ((number "34" 654 . 656)))
+          ("ID" . ((number "10" 393 . 395)))
+          ("DIVIDE" . ((number "25" 496 . 498)))
+          ("RBRACE" . ((number "29" 574 . 576)))
+          ("LSBRACKET" . ((number "38" 726 . 728)))
+          ("FLOAT" . ((number "3" 291 . 292)))
+          ("EQ" . ((number "21" 425 . 427)))
+          ("IF" . ((number "6" 336 . 337)))
+          ("SEMICOLON" . ((number "31" 612 . 614)))
+          ("RSBRACKET" . ((number "39" 747 . 749)))
+          ("TERMINALNUM" . ((number "40" 770 . 772)))
+          ("CHAR" . ((number "5" 323 . 324)))
+          ("DOUBLE" . ((number "4" 308 . 309)))
+          ("ELSE" . ((number "7" 351 . 352)))
+          ("MINUS" . ((number "23" 458 . 460)))
+          ("NOTEQ" . ((number "37" 705 . 707)))
+          ("NUMBER" . ((number "20" 411 . 413)))
+          ("ERROR" . ((punctuation "-" 231 . 232) (number "1" 232 . 233)))
+          ("COMMA" . ((number "30" 591 . 593)))
+          ("DOUBLEEQ" . ((number "36" 688 . 690)))
+          ("SCANNER_H_")
+          ("MULTIPLY" . ((number "24" 478 . 480)))
+          ("GE" . ((number "33" 640 . 642)))
+          ("MAIN" . ((number "1" 261 . 262)))
+          ("DO" . ((number "8" 364 . 365)))
+          ("PLUS" . ((number "22" 441 . 443)))
+          ("LRBRACKET" . ((number "26" 517 . 519)))
+          ("GT" . ((number "32" 626 . 628)))
+          ("LE" . ((number "35" 668 . 670)))
+          ("LBRACE" . ((number "28" 556 . 558)))
+          )
+)
+    (semanticdb-table "parser_init.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("general_header.h" include nil nil [1 28])
+            ("parser_def.h" include nil nil [30 53])
+            ("semantic_actions.h" include nil nil [54 83])
+            ("scanner.h" include nil nil [84 104])
+            ("nonterms" variable
+               (:dereference 1
+                :typemodifiers ("extern")
+                :type ("nonterminal" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [106 156])
+            ("parsing_stack" variable
+               (:dereference 1
+                :typemodifiers ("extern")
+                :type ("grammar_symbol" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [157 214])
+            ("codelist" variable
+               (:dereference 1
+                :typemodifiers ("extern")
+                :type ("intermediate_code" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [215 272])
+            ("stacktop" variable
+               (:typemodifiers ("extern")
+                :type "int")
+                nil [273 325])
+            ("codelistlen" variable
+               (:typemodifiers ("extern")
+                :type "int")
+                nil [273 325])
+            ("tempnum" variable
+               (:typemodifiers ("extern")
+                :type "int")
+                nil [273 325])
+            ("labelnum" variable
+               (:typemodifiers ("extern")
+                :type "int")
+                nil [273 325])
+            ("newproduction" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("production" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [384 478])
+            ("addproduction" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("code" variable (:type "int") (reparse-symbol arg-sub-list) [506 515])
+                    ("prod" variable
+                       (:pointer 1
+                        :type ("production" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [516 540]))                  
+                :type "void")
+                nil [480 642])
+            ("addsymbol" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("prod" variable
+                       (:pointer 1
+                        :type ("production" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [666 690])
+                    ("type" variable (:type "int") (reparse-symbol arg-sub-list) [691 700])
+                    ("code" variable (:type "int") (reparse-symbol arg-sub-list) [701 710])
+                    ("action" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [711 724]))                  
+                :type "void")
+                nil [644 875])
+            ("setproductionaction" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("prod" variable
+                       (:pointer 1
+                        :type ("production" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [909 933])
+                    ("action" variable (:type ("action_func" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [934 953]))                  
+                :type "void")
+                nil [877 994])
+            ("setproductionliteral" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("prod" variable
+                       (:pointer 1
+                        :type ("production" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1029 1053])
+                    ("literal" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1054 1074]))                  
+                :type "void")
+                nil [996 1107])
+            ("init_nonterms" function
+               (:typemodifiers ("static")
+                :type "void")
+                nil [1131 1383])
+            ("set_nonterms" function
+               (:typemodifiers ("static")
+                :type "void")
+                nil [1385 2079])
+            ("set_productions" function
+               (:typemodifiers ("static")
+                :type "void")
+                nil [2081 16641])
+            ("calc_nonterm_nullable" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("code" variable (:type "int") (reparse-symbol arg-sub-list) [16676 16685]))                  
+                :type "int")
+                nil [16643 18159])
+            ("calc_nullable" function
+               (:typemodifiers ("static")
+                :type "void")
+                nil [18161 18417])
+            ("addtoFIRST" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("dstFIRST" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [18441 18455])
+                    ("code" variable (:type "int") (reparse-symbol arg-sub-list) [18456 18465]))                  
+                :type "int")
+                nil [18419 18583])
+            ("copyFIRST" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("dstFIRST" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [18606 18620])
+                    ("srcFIRST" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [18621 18641]))                  
+                :type "int")
+                nil [18585 18820])
+            ("calc_nonterm_FIRST" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("code" variable (:type "int") (reparse-symbol arg-sub-list) [18852 18861])
+                    ("visited" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [18862 18875]))                  
+                :type "int")
+                nil [18822 20077])
+            ("calc_FIRST" function
+               (:typemodifiers ("static")
+                :type "void")
+                nil [20079 21103])
+            ("init_parser" function (:type "void") nil [21105 21266]))          
+      :file "parser_init.c"
+      :pointmax 21267
+      :fsize 21266
+      :lastmodtime '(21168 48378 619140 943000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semantic_actions.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("semantic_actions.h" include nil nil [1 30])
+            ("general_header.h" include nil nil [31 58])
+            ("parser_def.h" include nil nil [59 82])
+            ("scanner.h" include nil nil [83 103])
+            ("nonterms" variable
+               (:dereference 1
+                :typemodifiers ("extern")
+                :type ("nonterminal" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [105 155])
+            ("parsing_stack" variable
+               (:dereference 1
+                :typemodifiers ("extern")
+                :type ("grammar_symbol" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [156 213])
+            ("codelist" variable
+               (:dereference 1
+                :typemodifiers ("extern")
+                :type ("intermediate_code" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [214 271])
+            ("stacktop" variable
+               (:typemodifiers ("extern")
+                :type "int")
+                nil [272 324])
+            ("codelistlen" variable
+               (:typemodifiers ("extern")
+                :type "int")
+                nil [272 324])
+            ("tempnum" variable
+               (:typemodifiers ("extern")
+                :type "int")
+                nil [272 324])
+            ("labelnum" variable
+               (:typemodifiers ("extern")
+                :type "int")
+                nil [272 324])
+            ("addcode" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("format" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [346 365])
+                    ("codelen" variable (:type "int") (reparse-symbol arg-sub-list) [366 378])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [379 383]))                  
+                :type "void")
+                nil [326 577])
+            ("newtemp" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :type "char")
+                nil [579 708])
+            ("newlabel" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :type "char")
+                nil [710 848])
+            ("assignstmt_id_copying" function
+               (:arguments 
+                  ( ("srctoken" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("token" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [902 931]))                  
+                :type "void")
+                nil [875 1001])
+            ("assignstmt_expr_copying" function
+               (:arguments 
+                  ( ("srcsym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1032 1068]))                  
+                :type "void")
+                nil [1003 1167])
+            ("condstmt_cond_copying" function
+               (:arguments 
+                  ( ("srcsym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1196 1232]))                  
+                :type "void")
+                nil [1169 1317])
+            ("loopstmt_cond_copying" function
+               (:arguments 
+                  ( ("srcsym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1346 1382]))                  
+                :type "void")
+                nil [1319 1467])
+            ("cond_lexpr_copying" function
+               (:arguments 
+                  ( ("srcsym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1493 1529]))                  
+                :type "void")
+                nil [1469 1614])
+            ("cond_reop_copying" function
+               (:arguments 
+                  ( ("srcsym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1639 1675]))                  
+                :type "void")
+                nil [1616 1752])
+            ("cond_rexpr_copying" function
+               (:arguments 
+                  ( ("srcsym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1778 1814]))                  
+                :type "void")
+                nil [1754 1899])
+            ("expr_term_copying" function
+               (:arguments 
+                  ( ("srcsym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1924 1960]))                  
+                :type "void")
+                nil [1901 2135])
+            ("expr_expr__copying" function
+               (:arguments 
+                  ( ("srcsym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2161 2197]))                  
+                :type "void")
+                nil [2137 2291])
+            ("expr__starting_op_copying" function
+               (:arguments 
+                  ( ("srctoken" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("token" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2324 2353]))                  
+                :type "void")
+                nil [2293 2418])
+            ("expr__term_copying" function
+               (:arguments 
+                  ( ("srcsym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2444 2480]))                  
+                :type "void")
+                nil [2420 2566])
+            ("expr__expr__copying" function
+               (:arguments 
+                  ( ("srcsym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2593 2629]))                  
+                :type "void")
+                nil [2568 2724])
+            ("term_factor_copying" function
+               (:arguments 
+                  ( ("srcsym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2751 2787]))                  
+                :type "void")
+                nil [2726 2966])
+            ("term_term__copying" function
+               (:arguments 
+                  ( ("srcsym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2992 3028]))                  
+                :type "void")
+                nil [2968 3122])
+            ("term__starting_op_copying" function
+               (:arguments 
+                  ( ("srctoken" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("token" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3155 3184]))                  
+                :type "void")
+                nil [3124 3249])
+            ("term__factor_copying" function
+               (:arguments 
+                  ( ("srcsym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3277 3313]))                  
+                :type "void")
+                nil [3251 3401])
+            ("term__term__copying" function
+               (:arguments 
+                  ( ("srcsym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3428 3464]))                  
+                :type "void")
+                nil [3403 3559])
+            ("factor_sign_copying" function
+               (:arguments 
+                  ( ("srctoken" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("token" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3586 3615]))                  
+                :type "void")
+                nil [3561 3683])
+            ("factor_factor_copying" function
+               (:arguments 
+                  ( ("srcsym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3712 3748]))                  
+                :type "void")
+                nil [3685 3842])
+            ("factor_factor__copying" function
+               (:arguments 
+                  ( ("srcsym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3872 3908]))                  
+                :type "void")
+                nil [3844 4006])
+            ("factor__id_num_copying" function
+               (:arguments 
+                  ( ("srctoken" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("token" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4036 4065]))                  
+                :type "void")
+                nil [4008 4142])
+            ("factor__expr_copying" function
+               (:arguments 
+                  ( ("srcsym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4170 4206]))                  
+                :type "void")
+                nil [4144 4302])
+            ("reop_copying" function
+               (:arguments 
+                  ( ("srctoken" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("token" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4322 4351]))                  
+                :type "void")
+                nil [4304 4417])
+            ("assignstmt_expanding" function
+               (:arguments 
+                  ( ("sym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4484 4517]))                  
+                :type "void")
+                nil [4458 4570])
+            ("condstmt_expanding" function
+               (:arguments 
+                  ( ("sym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4596 4629]))                  
+                :type "void")
+                nil [4572 4774])
+            ("loopstmt_expanding" function
+               (:arguments 
+                  ( ("sym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4800 4833]))                  
+                :type "void")
+                nil [4776 4931])
+            ("cond_expanding" function
+               (:arguments 
+                  ( ("sym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4953 4986]))                  
+                :type "void")
+                nil [4933 5033])
+            ("expr_expanding" function
+               (:arguments 
+                  ( ("sym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5055 5088]))                  
+                :type "void")
+                nil [5035 5179])
+            ("expr__expanding" function
+               (:arguments 
+                  ( ("sym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5202 5235]))                  
+                :type "void")
+                nil [5181 5444])
+            ("term_expanding" function
+               (:arguments 
+                  ( ("sym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5466 5499]))                  
+                :type "void")
+                nil [5446 5590])
+            ("term__expanding" function
+               (:arguments 
+                  ( ("sym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5614 5647]))                  
+                :type "void")
+                nil [5593 5856])
+            ("factor_sign_expanding" function
+               (:arguments 
+                  ( ("sym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5885 5918]))                  
+                :type "void")
+                nil [5858 5967])
+            ("factor_factor__expanding" function
+               (:arguments 
+                  ( ("sym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5999 6032]))                  
+                :type "void")
+                nil [5969 6081])
+            ("factor__id_num_expanding" function
+               (:arguments 
+                  ( ("sym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6113 6146]))                  
+                :type "void")
+                nil [6083 6196])
+            ("factor__expr_expanding" function
+               (:arguments 
+                  ( ("sym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6226 6259]))                  
+                :type "void")
+                nil [6198 6309])
+            ("reop_expanding" function
+               (:arguments 
+                  ( ("sym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6331 6364]))                  
+                :type "void")
+                nil [6311 6411])
+            ("condstmt_then_action" function
+               (:arguments 
+                  ( ("sym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6476 6509]))                  
+                :type "void")
+                nil [6450 7043])
+            ("condstmt_else_action" function
+               (:arguments 
+                  ( ("sym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7071 7104]))                  
+                :type "void")
+                nil [7045 7456])
+            ("loopstmt_do_action" function
+               (:arguments 
+                  ( ("sym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7482 7515]))                  
+                :type "void")
+                nil [7458 7800])
+            ("expr__print_action" function
+               (:arguments 
+                  ( ("sym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7826 7859]))                  
+                :type "void")
+                nil [7802 8333])
+            ("term__print_action" function
+               (:arguments 
+                  ( ("sym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [8359 8392]))                  
+                :type "void")
+                nil [8335 8866])
+            ("assignstmt_ultimate_action" function
+               (:arguments 
+                  ( ("sym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [8933 8966]))                  
+                :type "void")
+                nil [8901 9189])
+            ("condstmt_ultimate_action" function
+               (:arguments 
+                  ( ("sym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [9221 9254]))                  
+                :type "void")
+                nil [9191 9409])
+            ("loopstmt_ultimate_action" function
+               (:arguments 
+                  ( ("sym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [9441 9474]))                  
+                :type "void")
+                nil [9411 9710])
+            ("cond_ultimate_action" function
+               (:arguments 
+                  ( ("sym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [9738 9771]))                  
+                :type "void")
+                nil [9712 10055])
+            ("factor_ultimate_action" function
+               (:arguments 
+                  ( ("sym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grammar_symbol" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [10085 10118]))                  
+                :type "void")
+                nil [10057 10418]))          
+      :file "semantic_actions.c"
+      :pointmax 10420
+      :fsize 10419
+      :lastmodtime '(21170 6894 803342 285000)
+      :unmatched-syntax '((semantic-list 1069 . 1167) (semantic-list 1031 . 1068) (semantic-list 932 . 1001) (semantic-list 901 . 931) (semantic-list 734 . 848) (semantic-list 731 . 733) (semantic-list 602 . 708) (semantic-list 599 . 601)))
+    (semanticdb-table "compiler_frontend.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("general_header.h" include nil nil [1 28])
+            ("parser.h" include nil nil [29 48])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [59 68])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [69 82]))                  
+                :type "int")
+                nil [50 196]))          
+      :file "compiler_frontend.c"
+      :pointmax 197
+      :fsize 196
+      :lastmodtime '(21168 46352 779194 505000)
+      :unmatched-syntax nil)
+    (semanticdb-table "parser.h"
+      :file "parser.h"
+      :fsize 194
+      :lastmodtime '(21166 61662 663607 113000))
+    (semanticdb-table "scanner.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("scanner.h" include nil nil [120 140])
+            ("MAXSTATENUM" variable (:constant-flag t) nil [150 161])
+            ("MAXKEYWORDNUM" variable (:constant-flag t) nil [174 187])
+            ("ENDCHAR" variable (:constant-flag t) nil [199 206])
+            ("" type
+               (:members 
+                  ( ("START" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [289 295])
+                    ("END_AC" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [296 303])
+                    ("EQ_AC" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [304 310])
+                    ("DOUBLEEQ_AC" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [311 323])
+                    ("PLUS_AC" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [324 332])
+                    ("MINUS_AC" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [333 342])
+                    ("MULTIPLY_AC" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [343 355])
+                    ("DIVIDE_AC" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [356 366])
+                    ("LRBRACKET_AC" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [372 385])
+                    ("RRBRACKET_AC" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [386 399])
+                    ("LBRACE_AC" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [400 410])
+                    ("RBRACE_AC" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [411 421])
+                    ("COMMA_AC" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [422 431])
+                    ("SEMICOLON_AC" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [432 445])
+                    ("GT_AC" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [451 457])
+                    ("GE_AC" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [458 464])
+                    ("LT_AC" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [465 471])
+                    ("LE_AC" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [472 478])
+                    ("EXCLA" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [479 485])
+                    ("NOTEQ_AC" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [486 495])
+                    ("LSBRACKET_AC" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [496 509])
+                    ("RSBRACKET_AC" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [510 523])
+                    ("ID_AC" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [524 530])
+                    ("NUMBER_1_AC" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [536 548])
+                    ("NUMBER_2" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [549 558])
+                    ("NUMBER_3_AC" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [559 571])
+                    ("NUMBER_4" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [572 581])
+                    ("NUMBER_5" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [582 591])
+                    ("NUMBER_6_AC" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [592 604])
+                    ("STATENUM" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [605 615]))                  
+                :type "enum")
+                nil [278 616])
+            ("dfa_state_vars" type
+               (:prototype t
+                :type "struct")
+                nil [618 640])
+            ("dfa_char_check_func" function
+               (:prototype-flag t
+                :function-pointer t
+                :arguments 
+                  ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [728 732]))                  
+                :type "int")
+                nil [701 733])
+            ("dfa_action_func" function
+               (:prototype-flag t
+                :function-pointer t
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("dfa_state_vars" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [766 790])
+                    ("" variable (:type "char") (reparse-symbol arg-sub-list) [791 796]))                  
+                :type "void")
+                nil [742 797])
+            ("dfa_transition" type
+               (:members 
+                  ( ("func" variable (:type ("dfa_char_check_func" type (:type "class") nil nil)) (reparse-symbol classsubparts) [827 852])
+                    ("dststate" variable (:type "int") (reparse-symbol classsubparts) [857 870])
+                    ("next" variable
+                       (:pointer 1
+                        :type ("dfa_transition" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [875 903]))                  
+                :type "struct")
+                nil [799 906])
+            ("dfa_state" type
+               (:members 
+                  ( ("transitions" variable
+                       (:pointer 1
+                        :type ("dfa_transition" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [931 987])
+                    ("p_last_transition" variable
+                       (:pointer 2
+                        :type ("dfa_transition" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [931 987])
+                    ("accepted" variable (:type "int") (reparse-symbol classsubparts) [992 1005])
+                    ("action" variable (:type ("dfa_action_func" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1010 1033]))                  
+                :type "struct")
+                nil [908 1036])
+            ("keyword" type
+               (:members 
+                  ( ("code" variable (:type "int") (reparse-symbol classsubparts) [1059 1068])
+                    ("lexeme" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [1073 1092]))                  
+                :type "struct")
+                nil [1038 1095])
+            ("srcfile" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("FILE" type (:type "class") nil nil))
+                nil [1097 1118])
+            ("states" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type ("dfa_state" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [1119 1163])
+            ("keywords" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type ("keyword" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [1164 1210])
+            ("inputbuf" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type "char")
+                nil [1211 1269])
+            ("lexemebuf" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type "char")
+                nil [1211 1269])
+            ("inputbufptr" variable
+               (:typemodifiers ("static")
+                :type "int")
+                nil [1270 1306])
+            ("keyword_num" variable
+               (:typemodifiers ("static")
+                :type "int")
+                nil [1270 1306])
+            ("reload_buf" function
+               (:typemodifiers ("static")
+                :type "void")
+                nil [1342 1483])
+            ("openfile" function
+               (:arguments 
+                  ( ("path" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1498 1509]))                  
+                :type "int")
+                nil [1485 1598])
+            ("filter_space" function
+               (:typemodifiers ("static")
+                :type "void")
+                nil [1600 1719])
+            ("filter_comment" function
+               (:typemodifiers ("static")
+                :type "void")
+                nil [1721 1903])
+            ("get_char" function
+               (:typemodifiers ("static")
+                :type "char")
+                nil [1905 2292])
+            ("addtransition" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("srcstate" variable (:type "int") (reparse-symbol arg-sub-list) [2354 2367])
+                    ("dststate" variable (:type "int") (reparse-symbol arg-sub-list) [2368 2381])
+                    ("func" variable (:type ("dfa_char_check_func" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2382 2407]))                  
+                :type "void")
+                nil [2328 2720])
+            ("addkeyword" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("code" variable (:type "int") (reparse-symbol arg-sub-list) [2745 2754])
+                    ("lexeme" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2755 2774]))                  
+                :type "void")
+                nil [2722 2862])
+            ("isend" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("c" variable (:type "int") (reparse-symbol arg-sub-list) [2912 2918]))                  
+                :type "int")
+                nil [2895 2947])
+            ("iseq" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("c" variable (:type "int") (reparse-symbol arg-sub-list) [2965 2971]))                  
+                :type "int")
+                nil [2949 2996])
+            ("isplus" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("c" variable (:type "int") (reparse-symbol arg-sub-list) [3016 3022]))                  
+                :type "int")
+                nil [2998 3047])
+            ("isminus" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("c" variable (:type "int") (reparse-symbol arg-sub-list) [3068 3074]))                  
+                :type "int")
+                nil [3049 3099])
+            ("ismultiply" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("c" variable (:type "int") (reparse-symbol arg-sub-list) [3123 3129]))                  
+                :type "int")
+                nil [3101 3154])
+            ("isdivide" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("c" variable (:type "int") (reparse-symbol arg-sub-list) [3176 3182]))                  
+                :type "int")
+                nil [3156 3207])
+            ("islrbracket" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("c" variable (:type "int") (reparse-symbol arg-sub-list) [3232 3238]))                  
+                :type "int")
+                nil [3209 3263])
+            ("isrrbracket" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("c" variable (:type "int") (reparse-symbol arg-sub-list) [3288 3294]))                  
+                :type "int")
+                nil [3265 3319])
+            ("islbrace" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("c" variable (:type "int") (reparse-symbol arg-sub-list) [3341 3347]))                  
+                :type "int")
+                nil [3321 3372])
+            ("isrbrace" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("c" variable (:type "int") (reparse-symbol arg-sub-list) [3394 3400]))                  
+                :type "int")
+                nil [3374 3425])
+            ("iscomma" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("c" variable (:type "int") (reparse-symbol arg-sub-list) [3446 3452]))                  
+                :type "int")
+                nil [3427 3477])
+            ("issemicolon" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("c" variable (:type "int") (reparse-symbol arg-sub-list) [3502 3508]))                  
+                :type "int")
+                nil [3479 3533])
+            ("isgt" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("c" variable (:type "int") (reparse-symbol arg-sub-list) [3551 3557]))                  
+                :type "int")
+                nil [3535 3582])
+            ("islt" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("c" variable (:type "int") (reparse-symbol arg-sub-list) [3600 3606]))                  
+                :type "int")
+                nil [3584 3631])
+            ("isexcla" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("c" variable (:type "int") (reparse-symbol arg-sub-list) [3652 3658]))                  
+                :type "int")
+                nil [3633 3683])
+            ("islsbracket" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("c" variable (:type "int") (reparse-symbol arg-sub-list) [3708 3714]))                  
+                :type "int")
+                nil [3685 3739])
+            ("isrsbracket" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("c" variable (:type "int") (reparse-symbol arg-sub-list) [3764 3770]))                  
+                :type "int")
+                nil [3741 3795])
+            ("isdot" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("c" variable (:type "int") (reparse-symbol arg-sub-list) [3814 3820]))                  
+                :type "int")
+                nil [3797 3845])
+            ("isexp" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("c" variable (:type "int") (reparse-symbol arg-sub-list) [3864 3870]))                  
+                :type "int")
+                nil [3847 3907])
+            ("ctoi" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("c" variable (:type "char") (reparse-symbol arg-sub-list) [3925 3932]))                  
+                :type "int")
+                nil [3909 3955])
+            ("normal_action" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("vars" variable
+                       (:pointer 1
+                        :type ("dfa_state_vars" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4011 4039])
+                    ("c" variable (:type "char") (reparse-symbol arg-sub-list) [4040 4047]))                  
+                :type "void")
+                nil [3985 4089])
+            ("number_1_action" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("vars" variable
+                       (:pointer 1
+                        :type ("dfa_state_vars" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4119 4147])
+                    ("c" variable (:type "char") (reparse-symbol arg-sub-list) [4148 4155]))                  
+                :type "void")
+                nil [4091 4292])
+            ("number_3_action" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("vars" variable
+                       (:pointer 1
+                        :type ("dfa_state_vars" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4322 4350])
+                    ("c" variable (:type "char") (reparse-symbol arg-sub-list) [4351 4358]))                  
+                :type "void")
+                nil [4294 4543])
+            ("number_5_action" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("vars" variable
+                       (:pointer 1
+                        :type ("dfa_state_vars" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4573 4601])
+                    ("c" variable (:type "char") (reparse-symbol arg-sub-list) [4602 4609]))                  
+                :type "void")
+                nil [4545 4688])
+            ("number_6_action" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("vars" variable
+                       (:pointer 1
+                        :type ("dfa_state_vars" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4718 4746])
+                    ("c" variable (:type "char") (reparse-symbol arg-sub-list) [4747 4754]))                  
+                :type "void")
+                nil [4690 4938])
+            ("set_start_trans" function
+               (:typemodifiers ("static")
+                :type "void")
+                nil [4962 5875])
+            ("set_intermediate_trans" function
+               (:typemodifiers ("static")
+                :type "void")
+                nil [5877 6729])
+            ("set_ac_states" function
+               (:typemodifiers ("static")
+                :type "void")
+                nil [6731 7726])
+            ("set_actions" function
+               (:typemodifiers ("static")
+                :type "void")
+                nil [7728 8036])
+            ("set_keywords" function
+               (:typemodifiers ("static")
+                :type "void")
+                nil [8038 8336])
+            ("init_scanner" function (:type "void") nil [8338 8655])
+            ("transit" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("vars" variable
+                       (:pointer 1
+                        :type ("dfa_state_vars" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [8676 8704]))                  
+                :type "int")
+                nil [8657 9557])
+            ("get_token" function (:type ("token" type
+                 (:prototype t
+                  :type "struct")
+                  nil nil)) nil [9559 10013]))          
+      :file "scanner.c"
+      :pointmax 10015
+      :fsize 10014
+      :lastmodtime '(21159 9046 327098 401000)
+      :unmatched-syntax '((TYPEDEF 734 . 741) (TYPEDEF 693 . 700))
+      :lexical-table 
+        '(("ENDCHAR" . ((string "'#'" 207 . 210)))
+          ("MAXKEYWORDNUM" . ((number "16" 188 . 190)))
+          ("MAXSTATENUM" . ((number "256" 162 . 165)))
+          )
+)
+    (semanticdb-table "source"
+      :major-mode 'c-mode
+      :tags 
+        '( ("main" function (:type "int") nil [1 76]))          
+      :file "source"
+      :pointmax 78
+      :fsize 77
+      :lastmodtime '(21173 38739 457400 983000)
+      :unmatched-syntax nil)
+    (semanticdb-table "Makefile"
+      :major-mode 'makefile-gmake-mode
+      :tags 
+        '( ("CC" variable (:default-value ("gcc")) nil [1 10])
+            ("CFLAGS" variable (:default-value ("-Wall" "-g")) nil [10 28])
+            ("all" function (:arguments ("compiler_frontend")) nil [29 52])
+            ("compiler_frontend" function (:arguments ("compiler_frontend.c" "parser.h" "scanner.o" "parser.o" "parser_init.o" "semantic_actions.o")) nil [53 267])
+            ("scanner.o" function (:arguments ("scanner.c" "scanner.h")) nil [268 329])
+            ("parser.o" function (:arguments ("parser.c" "general_header.h" "parser_def.h" "parser_init.h" "semantic_actions.h" "scanner.h")) nil [330 451])
+            ("parser_init.o" function (:arguments ("parser_init.c" "general_header.h" "parser_def.h" "semantic_actions.h")) nil [452 564])
+            ("semantic_actions.o" function (:arguments ("semantic_actions.c" "semantic_actions.h" "general_header.h" "parser_def.h")) nil [565 692]))          
+      :file "Makefile"
+      :pointmax 694
+      :fsize 693
+      :lastmodtime '(21168 11439 302651 91000)
+      :unmatched-syntax nil))
+  :file "!home!cuoverkiller!Projects!compiler!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

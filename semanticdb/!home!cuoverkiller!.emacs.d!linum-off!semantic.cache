@@ -1,0 +1,41 @@
+;; Object linum-off/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "linum-off/"
+  :tables
+  (list
+    (semanticdb-table "linum-off.el"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("linum" include nil nil [2422 2438])
+            ("linum-disabled-modes-list" variable
+               (:user-visible-flag t
+                :default-value (quote (eshell-mode wl-summary-mode compilation-mode org-mode text-mode dired-mode)))
+                nil [2440 2723])
+            ("linum-disable-starred-buffers" variable
+               (:user-visible-flag t
+                :default-value (quote t))
+                nil [2724 2864])
+            ("linum-on" function nil nil [2866 3265])
+            ("linum-off" package nil nil [3267 3287]))          
+      :file "linum-off.el"
+      :pointmax 3387
+      :fsize 3386
+      :lastmodtime '(21251 35164 297316 605000)
+      :unmatched-syntax nil)
+    (semanticdb-table "ede-off.el"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("ede-disabled-modes-list" variable
+               (:user-visible-flag t
+                :default-value (quote (org-mode dired-mode)))
+                nil [1 221])
+            ("ede-on" function nil nil [223 452])
+            ("ede-off" package nil nil [454 472]))          
+      :file "ede-off.el"
+      :pointmax 473
+      :fsize 472
+      :lastmodtime '(21251 35177 107316 267000)
+      :unmatched-syntax nil))
+  :file "!home!cuoverkiller!.emacs.d!linum-off!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

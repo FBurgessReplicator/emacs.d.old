@@ -1,0 +1,112 @@
+;; .emacs
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(blink-cursor-mode nil)
+n '(column-number-mode t)
+ '(custom-theme-load-path (quote (custom-theme-directory t)))
+ '(diff-switches "-u")
+ '(ecb-layout-name "left6")
+ '(ecb-layout-window-sizes (quote (("left6" (ecb-sources-buffer-name 0.2878787878787879 . 0.19444444444444445) (ecb-methods-buffer-name 0.2878787878787879 . 0.5833333333333334) (ecb-history-buffer-name 0.2878787878787879 . 0.19444444444444445)))))
+ '(ecb-options-version "2.40")
+ '(ede-project-directories (quote ("/home/cuoverkiller/Projects/ede")))
+ '(font-use-system-font t)
+ '(inhibit-startup-screen t)
+ '(org-agenda-files (quote ("~/Code/test.org")))
+ '(org-indent-indentation-per-level 4)
+ '(org-startup-indented t)
+ '(tool-bar-mode nil))
+
+;;; uncomment for CJK utf-8 support for non-Asian users
+;; (require 'un-define)
+;; (custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ ;; '(default ((t (:family "DejaVu Sans Mono" :foundry "unknown" :slant normal :weight normal :height 113 :width normal)))))
+
+;; 设置光标不闪烁
+(blink-cursor-mode 0)
+
+;; 设置默认tab宽度为4
+(setq tab-width 4)
+(setq-default indent-tabs-mode nil)
+(setq c-basic-offset 4)
+
+;; 显示行号
+(global-linum-mode t)
+
+;; C默认风格
+(setq c-default-style '((c-mode . "cc-mode")))
+
+;; 当前行高亮
+(global-hl-line-mode 1)
+
+;; 不生成备份
+(setq make-backup-files nil)
+
+;; GDB多窗口
+(setq gdb-many-windows t)
+
+;; M-左右选择buffer
+(global-set-key (kbd "M-<left>") 'previous-buffer)
+(global-set-key (kbd "M-<right>") 'next-buffer)
+
+;; make emacs a powerful IDE
+(add-to-list 'load-path "~/.emacs.d/")
+
+;; set windmove and framemove
+(load "config/framemove.el")
+
+;; install color-theme
+(load "config/color-theme.el")
+
+;; install yasnippet
+(load "config/yasnippet.el")
+
+;; install auto-complete
+(load "config/auto-complete.el")
+
+;; install auto-complete-clang
+(load "config/auto-complete-clang.el")
+
+;; install cedet
+(load "config/cedet.el")
+
+;; install ecb
+(load "config/ecb.el")
+
+;; install haskell-mode
+(load "config/haskell-mode.el")
+
+;; install org-mode
+(load "config/org-mode.el")
+
+(add-hook 'org-mode-hook '(lambda ()
+                            (set (make-local-variable 'semantic-mode) nil)
+                            (set (make-local-variable 'ede-minor-mode) nil)))
+
+;; install xscheme
+;; (load "config/xscheme.el")
+
+;; install git-modes
+;; (load "config/git-modes")
+
+;; install magit
+;; (load "config/magit.el")
+
+;; install linum-off
+(load "config/linum-off.el")
+
+
+
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

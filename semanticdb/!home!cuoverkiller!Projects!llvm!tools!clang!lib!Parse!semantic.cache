@@ -1,0 +1,515 @@
+;; Object Parse/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Parse/"
+  :tables
+  (list
+    (semanticdb-table "Parser.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("clang/Parse/Parser.h" include nil nil [478 509])
+            ("ParsePragma.h" include nil nil [510 534])
+            ("RAIIObjectsForParser.h" include nil nil [535 568])
+            ("clang/AST/ASTConsumer.h" include nil nil [569 603])
+            ("clang/AST/DeclTemplate.h" include nil nil [604 639])
+            ("clang/Parse/ParseDiagnostic.h" include nil nil [640 680])
+            ("clang/Sema/DeclSpec.h" include nil nil [681 713])
+            ("clang/Sema/ParsedTemplate.h" include nil nil [714 752])
+            ("clang/Sema/Scope.h" include nil nil [753 782])
+            ("llvm/Support/raw_ostream.h" include nil nil [783 820])
+            ("clang" using (:type ("clang" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [821 843])
+            ("unnamed" type
+               (:members 
+                  ( ("ActionCommentHandler" type
+                       (:superclasses 
+                          ( ("CommentHandler" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("S" variable (:type ("Sema" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1015 1023])
+                            ("public" label nil (reparse-symbol classsubparts) [1025 1032])
+                            ("ActionCommentHandler" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("S" variable
+                                       (:reference 1
+                                        :type ("Sema" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1065 1073]))                                  
+                                :type ("ActionCommentHandler" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1044 1084])
+                            ("HandleComment" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("PP" variable
+                                       (:reference 1
+                                        :type ("Preprocessor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1115 1132])
+                                    ("Comment" variable (:type ("SourceRange" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1133 1153]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [1088 1206]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [960 1209]))                  
+                :type "namespace")
+                nil [846 1211])
+            ("getSEHExceptKeyword" function
+               (:pointer 1
+                :parent "Parser"
+                :type ("IdentifierInfo" type (:type "class") nil nil))
+                nil [1240 1500])
+            ("Parser" function
+               (:constructor-flag t
+                :parent "Parser"
+                :arguments 
+                  ( ("pp" variable
+                       (:reference 1
+                        :type ("Preprocessor" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1517 1534])
+                    ("actions" variable
+                       (:reference 1
+                        :type ("Sema" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1535 1549])
+                    ("skipFunctionBodies" variable (:type "bool") (reparse-symbol arg-sub-list) [1550 1574]))                  
+                :type ("Parser" type (:type "class") nil nil))
+                nil [1502 3889])
+            ("Diag" function
+               (:parent "Parser"
+                :arguments 
+                  ( ("Loc" variable (:type ("SourceLocation" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3922 3941])
+                    ("DiagID" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [3942 3958]))                  
+                :type ("DiagnosticBuilder" type (:type "class") nil nil))
+                nil [3891 3998])
+            ("Diag" function
+               (:parent "Parser"
+                :arguments 
+                  ( ("Tok" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Token" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4031 4048])
+                    ("DiagID" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [4049 4065]))                  
+                :type ("DiagnosticBuilder" type (:type "class") nil nil))
+                nil [4000 4111])
+            ("SuggestParentheses" function
+               (:parent "Parser"
+                :arguments 
+                  ( ("Loc" variable (:type ("SourceLocation" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4420 4439])
+                    ("DK" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [4440 4452])
+                    ("ParenRange" variable (:type ("SourceRange" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4485 4508]))                  
+                :type "void")
+                nil [4388 4898])
+            ("IsCommonTypo" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ExpectedTok" variable (:type ("tok::TokenKind" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4925 4952])
+                    ("Tok" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Token" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4953 4970]))                  
+                :type "bool")
+                nil [4900 5115])
+            ("ExpectAndConsume" function
+               (:parent "Parser"
+                :arguments 
+                  ( ("ExpectedTok" variable (:type ("tok::TokenKind" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5453 5480])
+                    ("DiagID" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [5481 5497])
+                    ("Msg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5528 5544])
+                    ("SkipToTok" variable (:type ("tok::TokenKind" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5545 5570])
+                    ("NoCount" variable (:type "bool") (reparse-symbol arg-sub-list) [5601 5614]))                  
+                :type "bool")
+                nil [5423 6668])
+            ("ExpectAndConsumeSemi" function
+               (:parent "Parser"
+                :arguments 
+                  ( ("DiagID" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [6704 6720]))                  
+                :type "bool")
+                nil [6670 7203])
+            ("ConsumeExtraSemi" function
+               (:parent "Parser"
+                :arguments 
+                  ( ("Kind" variable (:type ("ExtraSemiKind" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7235 7254])
+                    ("TST" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [7255 7268]))                  
+                :type "void")
+                nil [7205 8507])
+            ("HasFlagsSet" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("L" variable (:type ("Parser::SkipUntilFlags" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8715 8740])
+                    ("R" variable (:type ("Parser::SkipUntilFlags" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8741 8766]))                  
+                :type "bool")
+                nil [8691 8839])
+            ("SkipUntil" function
+               (:parent "Parser"
+                :arguments 
+                  ( ("Toks" variable (:type ("ArrayRef" type
+                         (:template-specifier 
+                            ( ("tok::TokenKind" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [9285 9315])
+                    ("Flags" variable (:type ("SkipUntilFlags" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9316 9337]))                  
+                :type "bool")
+                nil [9262 13247])
+            ("EnterScope" function
+               (:parent "Parser"
+                :arguments 
+                  ( ("ScopeFlags" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [13494 13514]))                  
+                :type "void")
+                nil [13470 13738])
+            ("ExitScope" function
+               (:parent "Parser"
+                :type "void")
+                nil [13789 14254])
+            ("ParseScopeFlags" function
+               (:constructor-flag t
+                :parent "Parser::ParseScopeFlags"
+                :arguments 
+                  ( ("Self" variable
+                       (:pointer 1
+                        :type ("Parser" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14407 14420])
+                    ("ScopeFlags" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [14421 14441])
+                    ("ManageFlags" variable (:type "bool") (reparse-symbol arg-sub-list) [14475 14492]))                  
+                :type ("ParseScopeFlags" type (:type "class") nil nil))
+                nil [14366 14643])
+            ("ParseScopeFlags" function
+               (:destructor-flag t
+                :parent "Parser::ParseScopeFlags"
+                :type "void")
+                nil [14745 14842])
+            ("Parser" function
+               (:destructor-flag t
+                :parent "Parser"
+                :type "void")
+                nil [15042 16693])
+            ("Initialize" function
+               (:parent "Parser"
+                :type "void")
+                nil [16736 19831])
+            ("unnamed" type
+               (:members 
+                  ( ("DestroyTemplateIdAnnotationsRAIIObj" type
+                       (:members 
+                          ( ("Container" variable (:type ("SmallVectorImpl" type
+                                 (:template-specifier 
+                                    ( ("TemplateIdAnnotation" type (:pointer 1) nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [20021 20072])
+                            ("public" label nil (reparse-symbol classsubparts) [20075 20082])
+                            ("DestroyTemplateIdAnnotationsRAIIObj" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("Container" variable
+                                       (:reference 1
+                                        :type ("SmallVectorImpl" type
+                                             (:template-specifier 
+                                                ( ("TemplateIdAnnotation" type (:pointer 1) nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [20123 20213]))                                  
+                                :type ("DestroyTemplateIdAnnotationsRAIIObj" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [20087 20245])
+                            ("DestroyTemplateIdAnnotationsRAIIObj" function
+                               (:destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [20251 20487]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [19973 20492]))                  
+                :type "namespace")
+                nil [19833 20494])
+            ("ParseTopLevelDecl" function
+               (:parent "Parser"
+                :arguments 
+                  ( ("Result" variable
+                       (:reference 1
+                        :type ("DeclGroupPtrTy" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20675 20698]))                  
+                :type "bool")
+                nil [20644 22055])
+            ("ParseExternalDeclaration" function
+               (:parent "Parser"
+                :arguments 
+                  ( ("attrs" variable
+                       (:reference 1
+                        :type ("ParsedAttributesWithRange" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22801 22834])
+                    ("DS" variable
+                       (:pointer 1
+                        :type ("ParsingDeclSpec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22868 22888]))                  
+                :type ("Parser::DeclGroupPtrTy" type (:type "class") nil nil))
+                nil [22745 28838])
+            ("isDeclarationAfterDeclarator" function
+               (:parent "Parser"
+                :type "bool")
+                nil [28970 29708])
+            ("isStartOfFunctionDefinition" function
+               (:parent "Parser"
+                :arguments 
+                  ( ("Declarator" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ParsingDeclarator" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [29882 29918]))                  
+                :type "bool")
+                nil [29841 30537])
+            ("ParseDeclOrFunctionDefInternal" function
+               (:parent "Parser"
+                :arguments 
+                  ( ("attrs" variable
+                       (:reference 1
+                        :type ("ParsedAttributesWithRange" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [31448 31481])
+                    ("DS" variable
+                       (:reference 1
+                        :type ("ParsingDeclSpec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [31521 31541])
+                    ("AS" variable (:type ("AccessSpecifier" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [31581 31600]))                  
+                :type ("Parser::DeclGroupPtrTy" type (:type "class") nil nil))
+                nil [31386 33884])
+            ("ParseDeclarationOrFunctionDefinition" function
+               (:parent "Parser"
+                :arguments 
+                  ( ("attrs" variable
+                       (:reference 1
+                        :type ("ParsedAttributesWithRange" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [33954 33987])
+                    ("DS" variable
+                       (:pointer 1
+                        :type ("ParsingDeclSpec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [34033 34053])
+                    ("AS" variable (:type ("AccessSpecifier" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [34099 34118]))                  
+                :type ("Parser::DeclGroupPtrTy" type (:type "class") nil nil))
+                nil [33886 34493])
+            ("isFunctionDeclaratorRequiringReturnTypeDeduction" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("D" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Declarator" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [34569 34589]))                  
+                :type "bool")
+                nil [34496 35229])
+            ("ParseFunctionDefinition" function
+               (:pointer 1
+                :parent "Parser"
+                :arguments 
+                  ( ("D" variable
+                       (:reference 1
+                        :type ("ParsingDeclarator" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [36002 36023])
+                    ("TemplateInfo" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ParsedTemplateInfo" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [36062 36101])
+                    ("LateParsedAttrs" variable
+                       (:pointer 1
+                        :type ("LateParsedAttrList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [36140 36176]))                  
+                :type ("Decl" type (:type "class") nil nil))
+                nil [35964 42906])
+            ("ParseKNRParamDeclarations" function
+               (:parent "Parser"
+                :arguments 
+                  ( ("D" variable
+                       (:reference 1
+                        :type ("Declarator" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [43097 43111]))                  
+                :type "void")
+                nil [43058 47007])
+            ("ParseAsmStringLiteral" function
+               (:parent "Parser"
+                :type ("Parser::ExprResult" type (:type "class") nil nil))
+                nil [47230 47897])
+            ("ParseSimpleAsm" function
+               (:parent "Parser"
+                :arguments 
+                  ( ("EndLoc" variable
+                       (:pointer 1
+                        :type ("SourceLocation" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [48040 48063]))                  
+                :type ("Parser::ExprResult" type (:type "class") nil nil))
+                nil [47998 49041])
+            ("takeTemplateIdAnnotation" function
+               (:pointer 1
+                :parent "Parser"
+                :arguments 
+                  ( ("tok" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Token" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [49278 49295]))                  
+                :type ("TemplateIdAnnotation" type (:type "class") nil nil))
+                nil [49223 49485])
+            ("AnnotateScopeToken" function
+               (:parent "Parser"
+                :arguments 
+                  ( ("SS" variable
+                       (:reference 1
+                        :type ("CXXScopeSpec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [49519 49536])
+                    ("IsNewAnnotation" variable (:type "bool") (reparse-symbol arg-sub-list) [49537 49558]))                  
+                :type "void")
+                nil [49487 50183])
+            ("TryAnnotateName" function
+               (:parent "Parser"
+                :arguments 
+                  ( ("IsAddressOfOperand" variable (:type "bool") (reparse-symbol arg-sub-list) [50819 50843])
+                    ("CCC" variable
+                       (:pointer 1
+                        :type ("CorrectionCandidateCallback" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [50868 50901]))                  
+                :type ("Parser::AnnotatedNameKind" type (:type "class") nil nil))
+                nil [50769 54715])
+            ("TryKeywordIdentFallback" function
+               (:parent "Parser"
+                :arguments 
+                  ( ("DisableKeyword" variable (:type "bool") (reparse-symbol arg-sub-list) [54754 54774]))                  
+                :type "bool")
+                nil [54717 55133])
+            ("TryIdentKeywordUpgrade" function
+               (:parent "Parser"
+                :type "bool")
+                nil [55135 55703])
+            ("TryAnnotateTypeOrScopeToken" function
+               (:parent "Parser"
+                :arguments 
+                  ( ("EnteringContext" variable (:type "bool") (reparse-symbol arg-sub-list) [57015 57036])
+                    ("NeedType" variable (:type "bool") (reparse-symbol arg-sub-list) [57037 57051]))                  
+                :type "bool")
+                nil [56974 61483])
+            ("TryAnnotateTypeOrScopeTokenAfterScopeSpec" function
+               (:parent "Parser"
+                :arguments 
+                  ( ("EnteringContext" variable (:type "bool") (reparse-symbol arg-sub-list) [61771 61792])
+                    ("NeedType" variable (:type "bool") (reparse-symbol arg-sub-list) [61848 61862])
+                    ("SS" variable
+                       (:reference 1
+                        :type ("CXXScopeSpec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [61918 61935])
+                    ("IsNewScope" variable (:type "bool") (reparse-symbol arg-sub-list) [61991 62007]))                  
+                :type "bool")
+                nil [61716 65539])
+            ("TryAnnotateCXXScopeToken" function
+               (:parent "Parser"
+                :arguments 
+                  ( ("EnteringContext" variable (:type "bool") (reparse-symbol arg-sub-list) [65945 65966]))                  
+                :type "bool")
+                nil [65907 66502])
+            ("isTokenEqualOrEqualTypo" function
+               (:parent "Parser"
+                :type "bool")
+                nil [66504 67404])
+            ("handleUnexpectedCodeCompletionToken" function
+               (:parent "Parser"
+                :type ("SourceLocation" type (:type "class") nil nil))
+                nil [67406 68099])
+            ("_anchor" function
+               (:parent "Parser::FieldCallback"
+                :type "void")
+                nil [68312 68353])
+            ("CodeCompleteDirective" function
+               (:parent "Parser"
+                :arguments 
+                  ( ("InConditional" variable (:type "bool") (reparse-symbol arg-sub-list) [68433 68452]))                  
+                :type "void")
+                nil [68398 68516])
+            ("CodeCompleteInConditionalExclusion" function
+               (:parent "Parser"
+                :type "void")
+                nil [68518 68644])
+            ("CodeCompleteMacroName" function
+               (:parent "Parser"
+                :arguments 
+                  ( ("IsDefinition" variable (:type "bool") (reparse-symbol arg-sub-list) [68681 68699]))                  
+                :type "void")
+                nil [68646 68762])
+            ("CodeCompletePreprocessorExpression" function
+               (:parent "Parser"
+                :type "void")
+                nil [68764 68866])
+            ("CodeCompleteMacroArgument" function
+               (:parent "Parser"
+                :arguments 
+                  ( ("Macro" variable
+                       (:pointer 1
+                        :type ("IdentifierInfo" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [68907 68929])
+                    ("MacroInfo" variable
+                       (:pointer 1
+                        :type ("MacroInfo" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [68969 68990])
+                    ("ArgumentIndex" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [69030 69053]))                  
+                :type "void")
+                nil [68868 69203])
+            ("CodeCompleteNaturalLanguage" function
+               (:parent "Parser"
+                :type "void")
+                nil [69205 69292])
+            ("ParseMicrosoftIfExistsCondition" function
+               (:parent "Parser"
+                :arguments 
+                  ( ("Result" variable
+                       (:reference 1
+                        :type ("IfExistsCondition" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [69339 69365]))                  
+                :type "bool")
+                nil [69294 70979])
+            ("ParseMicrosoftIfExistsExternalDeclaration" function
+               (:parent "Parser"
+                :type "void")
+                nil [70981 71999])
+            ("ParseModuleImport" function
+               (:parent "Parser"
+                :arguments 
+                  ( ("AtLoc" variable (:type ("SourceLocation" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [72050 72071]))                  
+                :type ("Parser::DeclGroupPtrTy" type (:type "class") nil nil))
+                nil [72001 73364])
+            ("diagnoseOverflow" function
+               (:parent "BalancedDelimiterTracker"
+                :type "bool")
+                nil [73366 73585])
+            ("expectAndConsume" function
+               (:parent "BalancedDelimiterTracker"
+                :arguments 
+                  ( ("DiagID" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [73635 73651])
+                    ("Msg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [73696 73712])
+                    ("SkipToToc" variable (:type ("tok::TokenKind" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [73757 73783]))                  
+                :type "bool")
+                nil [73587 73984])
+            ("diagnoseMissingClose" function
+               (:parent "BalancedDelimiterTracker"
+                :type "bool")
+                nil [73986 75005])
+            ("skipToEnd" function
+               (:parent "BalancedDelimiterTracker"
+                :type "void")
+                nil [75007 75218]))          
+      :file "Parser.cpp"
+      :pointmax 75219
+      :fsize 75218
+      :lastmodtime '(21170 8111 606702 341000)
+      :unmatched-syntax '((EXPLICIT 1035 . 1043)))
+    (semanticdb-table "ParsePragma.h"
+      :file "ParsePragma.h"
+      :fsize 4449
+      :lastmodtime '(21170 8111 610035 674000))
+    (semanticdb-table "RAIIObjectsForParser.h"
+      :file "RAIIObjectsForParser.h"
+      :fsize 13880
+      :lastmodtime '(21170 8111 613369 8000)))
+  :file "!home!cuoverkiller!Projects!llvm!tools!clang!lib!Parse!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

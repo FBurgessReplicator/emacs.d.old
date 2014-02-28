@@ -1,0 +1,36 @@
+;; Object Code/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Code/"
+  :tables
+  (list
+    (semanticdb-table "test.scm"
+      :major-mode 'scheme-mode
+      :tags 
+        '( ("aa" variable (:default-value ("2")) nil [1 14])
+            ("plus-func" function (:arguments ("add")) nil [16 69])
+            ("add-3" variable (:default-value ((85 . 98))) nil [71 99]))          
+      :file "test.scm"
+      :pointmax 143
+      :fsize 142
+      :lastmodtime '(21174 53432 220645 411000)
+      :unmatched-syntax '((semantic-list 130 . 139) (semantic-list 101 . 126) (semantic-list 128 . 137) (semantic-list 101 . 126) (semantic-list 123 . 132) (semantic-list 101 . 121) (semantic-list 103 . 112) (semantic-list 125 . 134) (semantic-list 101 . 123) (semantic-list 118 . 127) (semantic-list 101 . 116) (semantic-list 118 . 127) (semantic-list 101 . 116) (semantic-list 105 . 114) (semantic-list 101 . 103)))
+    (semanticdb-table "test.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("FALSE" variable (:constant-flag t) nil [29 34])
+            ("FALSE" variable (:constant-flag t) nil [29 34])
+            ("TRUE" variable (:constant-flag t) nil [45 49])
+            ("main" function (:type "int") nil [58 178]))          
+      :file "test.c"
+      :pointmax 179
+      :fsize 178
+      :lastmodtime '(21217 37767 461850 530000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("FALSE" . ((number "0" 35 . 36)))
+          )
+))
+  :file "!home!cuoverkiller!Code!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
